@@ -1,47 +1,93 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
-import { CheckCircle } from "lucide-react"
+import { BookOpen, Users, Globe, Brain, Award, TrendingUp } from "lucide-react"
 
-export default function JourneyTimeline() {
-  const timelineItems = [
-    {
-      year: "2013",
-      title: "Company Founded",
-      description: "Started with a small team of educators and developers passionate about transforming education.",
-      achievements: ["Initial team of 5 members", "Secured seed funding", "Developed concept prototype"],
+export default function EducationalImpact() {
+  type ImpactTab = keyof typeof impactData;
+  const [activeTab, setActiveTab] = useState<ImpactTab>("students");
+
+  const impactData = {
+    students: {
+      title: "Student Success",
+      description: "Our platform has transformed educational outcomes for students worldwide.",
+      stats: [
+        { value: "10M+", label: "Active Students", icon: Users },
+        { value: "42%", label: "Improved Test Scores", icon: TrendingUp },
+        { value: "89%", label: "Student Engagement", icon: BookOpen },
+      ],
+      testimonial: {
+        quote: "The personalized learning path helped me understand complex concepts that I struggled with for years. I've improved my grades and confidence.",
+        author: "Sarah J., High School Student"
+      }
     },
-    {
-      year: "2015",
-      title: "First Platform Launch",
-      description: "Released our first learning management system, serving 1,000+ students in the first year.",
-      achievements: ["1,000+ active users", "Partnership with 3 schools", "95% user satisfaction"],
+    educators: {
+      title: "Empowering Educators",
+      description: "We provide tools that help teachers create more effective and engaging learning experiences.",
+      stats: [
+        { value: "500K+", label: "Active Educators", icon: Users },
+        { value: "6.5hrs", label: "Weekly Time Saved", icon: TrendingUp },
+        { value: "92%", label: "Teaching Satisfaction", icon: Award },
+      ],
+      testimonial: {
+        quote: "This platform has revolutionized my classroom. I can track individual progress, identify learning gaps, and provide targeted support when students need it most.",
+        author: "Mark T., Science Teacher"
+      }
     },
-    {
-      year: "2017",
-      title: "AI Integration",
-      description: "Pioneered adaptive learning algorithms to personalize the educational experience.",
-      achievements: ["Patented AI algorithm", "40% improvement in learning outcomes", "Featured in EdTech Magazine"],
+    institutions: {
+      title: "Institutional Excellence",
+      description: "Educational institutions partner with us to transform their digital learning infrastructure.",
+      stats: [
+        { value: "5,000+", label: "Partner Institutions", icon: Globe },
+        { value: "35%", label: "Resource Optimization", icon: TrendingUp },
+        { value: "94%", label: "Renewal Rate", icon: Award },
+      ],
+      testimonial: {
+        quote: "Implementing this platform across our district has streamlined our curriculum delivery and provided invaluable data insights for continuous improvement.",
+        author: "Dr. Lisa M., District Superintendent"
+      }
     },
-    {
-      year: "2019",
-      title: "Global Expansion",
-      description: "Expanded to 15 countries, making our platform available in 8 different languages.",
-      achievements: ["Offices in 4 continents", "Multi-language support", "100,000+ global users"],
-    },
-    {
-      year: "2021",
-      title: "Mobile App Launch",
-      description: "Released our mobile application, making learning accessible anytime, anywhere.",
-      achievements: ["1M+ app downloads", "4.8 star app rating", "Mobile learning award winner"],
-    },
-    {
-      year: "2023",
-      title: "10 Million Users",
-      description: "Reached a milestone of 10 million users worldwide, with a 98% satisfaction rate.",
-      achievements: ["10M+ active users", "98% satisfaction rate", "Series C funding secured"],
-    },
-  ]
+    technology: {
+      title: "Cutting-Edge Technology",
+      description: "Our AI-powered learning solutions adapt to individual needs for personalized education.",
+      stats: [
+        { value: "8", label: "Languages Supported", icon: Globe },
+        { value: "3.2M", label: "AI Learning Models", icon: Brain },
+        { value: "99.8%", label: "Platform Uptime", icon: TrendingUp },
+      ],
+      testimonial: {
+        quote: "The adaptive technology recognizes exactly when a student is struggling with a concept and provides just the right intervention at the perfect moment.",
+        author: "Prof. James W., Educational Technology Researcher"
+      }
+    }
+  }
+
+  const fadeInUpVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  }
+
+  const tabVariants = {
+    inactive: { opacity: 0.7, scale: 0.95 },
+    active: { opacity: 1, scale: 1 }
+  }
+
+  const StatCard = ({ icon: Icon, value, label }: { icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; value: string; label: string }) => (
+    <motion.div 
+      variants={fadeInUpVariants}
+      className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-emerald-500 flex flex-col items-center"
+    >
+      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 flex items-center justify-center mb-4">
+        <Icon className="text-emerald-600 w-6 h-6" />
+      </div>
+      <h3 className="text-3xl font-bold text-emerald-700">{value}</h3>
+      <p className="text-gray-600 text-center mt-1">{label}</p>
+    </motion.div>
+  )
+
+  const tabs = Object.keys(impactData) as ImpactTab[];
+  const activeData = impactData[activeTab]
 
   return (
     <section className="bg-white py-20">
@@ -54,106 +100,83 @@ export default function JourneyTimeline() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
-            Our Journey
+            Our Educational Impact
           </h2>
           <p className="text-lg text-gray-600">
-            From a small startup to a global educational technology company, here&apos;s how we&apos;ve grown over the
-            years.
+            Were transforming education through technology, creating measurable improvements for students, educators, and institutions worldwide.
           </p>
         </motion.div>
 
-        {/* Desktop Timeline (hidden on mobile) */}
-        <div className="hidden md:block relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-emerald-200 via-teal-200 to-cyan-200"></div>
-
-          <div className="space-y-24">
-            {timelineItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
-              >
-                <div className="flex-1"></div>
-
-                {/* Timeline dot with year */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                    {item.year}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 p-6">
-                  <motion.div
-                    className={`bg-white p-6 rounded-xl shadow-lg border-t-4 border-emerald-500 hover:shadow-xl transition-shadow ${index % 2 === 0 ? "mr-12" : "ml-12"}`}
-                    whileHover={{ y: -5 }}
-                  >
-                    <h3 className="text-xl font-bold mb-2 text-emerald-700">{item.title}</h3>
-                    <p className="text-gray-600 mb-4">{item.description}</p>
-
-                    <div className="space-y-2">
-                      {item.achievements.map((achievement, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{achievement}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+          {tabs.map((tab) => (
+            <motion.button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              variants={tabVariants}
+              initial="inactive"
+              animate={activeTab === tab ? "active" : "inactive"}
+              className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-all ${
+                activeTab === tab
+                  ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </motion.button>
+          ))}
         </div>
 
-        {/* Mobile Timeline (visible only on mobile) */}
-        <div className="md:hidden relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-200 via-teal-200 to-cyan-200"></div>
+        {/* Content Section */}
+        <motion.div
+          key={activeTab}
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUpVariants}
+          transition={{ duration: 0.5, staggerChildren: 0.1 }}
+          className="max-w-6xl mx-auto"
+        >
+          <motion.div variants={fadeInUpVariants} className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 text-emerald-700">{activeData.title}</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto">{activeData.description}</p>
+          </motion.div>
 
-          <div className="space-y-12">
-            {timelineItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-16"
-              >
-                {/* Year bubble */}
-                <div className="absolute left-4 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white text-xs font-bold z-10">
-                  {item.year.substring(2)}
-                </div>
-
-                {/* Content */}
-                <motion.div
-                  className="bg-white p-5 rounded-xl shadow-md border-l-4 border-emerald-500"
-                  whileHover={{ x: 5 }}
-                >
-                  <div className="text-xs font-semibold text-emerald-700 mb-1">{item.year}</div>
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm mb-3">{item.description}</p>
-
-                  <div className="space-y-1">
-                    {item.achievements.map((achievement, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-xs">{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              </motion.div>
+          {/* Stats Grid */}
+          <motion.div 
+            variants={fadeInUpVariants}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          >
+            {activeData.stats.map((stat, index) => (
+              <StatCard key={index} icon={stat.icon} value={stat.value} label={stat.label} />
             ))}
-          </div>
-        </div>
+          </motion.div>
+
+          {/* Testimonial */}
+          <motion.div 
+            variants={fadeInUpVariants}
+            className="bg-gradient-to-r from-emerald-50 to-teal-50 p-8 rounded-2xl shadow-md max-w-4xl mx-auto"
+          >
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-4">
+                <div className="absolute -top-6 -left-6 text-emerald-200 text-6xl font-serif">&quot;</div>
+                <p className="text-gray-700 italic relative z-10">{activeData.testimonial.quote}</p>
+                <div className="absolute -bottom-4 -right-4 text-emerald-200 text-6xl font-serif rotate-180">&quot;</div>
+              </div>
+              <p className="font-medium text-emerald-700 mt-4">— {activeData.testimonial.author}</p>
+            </div>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div 
+            variants={fadeInUpVariants}
+            className="mt-16 text-center"
+          >
+            <button className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+              Learn How We Can Help You
+            </button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
 }
-
