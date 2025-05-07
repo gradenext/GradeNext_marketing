@@ -95,7 +95,7 @@ export default function ServicesHero() {
           transition={{ duration: 0.5 }}
           className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
         >
-          Transformative Educational Services
+          GradeNext: Intelligent Learning Solutions
         </motion.div>
 
         <motion.h1

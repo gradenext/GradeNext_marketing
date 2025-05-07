@@ -85,7 +85,7 @@ export default function AboutHero() {
           transition={{ duration: 0.5 }}
           className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
         >
-          About Our Company
+          About GradeNext 
         </motion.div>
 
         <motion.h1
@@ -105,8 +105,7 @@ export default function AboutHero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text- md:text-lg text-white/90 mb-10 max-w-3xl mx-auto"
         >
-          We&apos;re on a mission to make quality education accessible to everyone through innovative technology solutions
-          that adapt to individual learning styles.
+          GradeNext uses cutting-edge AI to deliver adaptive, engaging learning pathways, unlocking each student's potential for success and deeper understanding.
         </motion.p>
 
         {/* <motion.div

@@ -43,8 +43,8 @@ export default function MissionSection() {
             </div>
             <h3 className="text-xl font-bold mb-4">Our Mission</h3>
             <p className="text-gray-600">
-              To empower learners worldwide by providing innovative educational technology that adapts to individual
-              learning styles and needs, making quality education accessible to everyone.
+              To empower students through AI-driven personalized learning pathways, fostering
+              deeper understanding, critical thinking, and continuous academic growth.
             </p>
           </motion.div>
 
@@ -61,8 +61,8 @@ export default function MissionSection() {
             </div>
             <h3 className="text-xl font-bold mb-4">Our Vision</h3>
             <p className="text-gray-600">
-              A world where every person has access to personalized, high-quality education that helps them reach their
-              full potential, regardless of their location or circumstances.
+              To be the leading platform that unlocks every student's potential through individually
+              tailored education, supported by cutting-edge technology and expert insights.
             </p>
           </motion.div>
 
@@ -79,8 +79,8 @@ export default function MissionSection() {
             </div>
             <h3 className="text-xl font-bold mb-4">Our Approach</h3>
             <p className="text-gray-600">
-              We combine cutting-edge AI technology with proven educational methodologies to create adaptive learning
-              experiences that meet each student where they are and help them progress at their optimal pace.
+              GradeNext integrates advanced AI algorithms with established pedagogical principles
+              to deliver dynamic learning experiences that adapt to each student's unique pace, strengths.
             </p>
           </motion.div>
         </div>

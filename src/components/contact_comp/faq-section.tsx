@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react"
 export default function FaqSection() {
   const faqs = [
     {
-      question: "How quickly can I expect a response after submitting a contact form?",
+      question: "How does GradeNext personalize learning for students?",
       answer:
         "We strive to respond to all inquiries within 24 hours during business days. For urgent matters, we recommend calling our support line for immediate assistance.",
     },

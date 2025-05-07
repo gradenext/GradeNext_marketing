@@ -8,28 +8,28 @@ export default function ServicesOverview() {
     {
       icon: <BookOpen className="w-8 h-8" />,
       title: "Adaptive Learning",
-      description: "Personalized learning paths that adapt to each student's strengths, weaknesses, and learning pace.",
+      description: "Personalized learning that adjusts to individual needs, offering targeted practice and reinforcing concepts for better mastery.",
       color: "bg-gradient-to-br from-blue-500 to-indigo-600",
       delay: 0.1,
     },
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI Tutoring",
-      description: "Intelligent tutoring systems that provide real-time feedback and support across all subjects.",
+      title: "Performance Insights",
+      description: "AI-driven analysis of progress through weekly tests and community assessments, providing clear insights and identifying areas for growth.",
       color: "bg-gradient-to-br from-purple-500 to-pink-600",
       delay: 0.2,
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title: "Interactive Content",
-      description: "Engaging multimedia content that brings complex concepts to life through interactive experiences.",
+      title: "Tutor Support",
+      description: "Personalized assistance from experienced tutors to clarify doubts and revisit challenging topics, fostering deeper understanding.",
       color: "bg-gradient-to-br from-amber-500 to-orange-600",
       delay: 0.3,
     },
     {
       icon: <BarChart className="w-8 h-8" />,
-      title: "Analytics Dashboard",
-      description: "Comprehensive insights into student performance with actionable recommendations for improvement.",
+      title: "Skill Development",
+      description: "Engaging exercises and real-world applications designed to enhance logical thinking, problem-solving, and critical reasoning abilities",
       color: "bg-gradient-to-br from-emerald-500 to-teal-600",
       delay: 0.4,
     },
@@ -46,11 +46,11 @@ export default function ServicesOverview() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
-            Our Core Services
+          Key Features  
           </h2>
           <p className="text-lg text-gray-600">
-            We offer a comprehensive suite of educational technology services designed to transform the learning
-            experience for students of all ages and abilities.
+          GradeNext provides a range of intelligent tools designed to personalize the learning journey 
+          and drive academic achievement. 
           </p>
         </motion.div>
 
@@ -72,14 +72,14 @@ export default function ServicesOverview() {
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-white/90">{service.description}</p>
               </div>
-              <div className="bg-white p-6">
+              {/* <div className="bg-white p-6">
                 <motion.button
                   whileHover={{ x: 5 }}
                   className="text-sm font-medium flex items-center text-gray-600 hover:text-indigo-600 transition-colors"
                 >
                   Learn more <span className="ml-2">→</span>
                 </motion.button>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

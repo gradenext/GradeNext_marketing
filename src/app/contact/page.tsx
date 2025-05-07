@@ -18,7 +18,7 @@ export default function ContactPage() {
       <ContactHero />
       <ContactForm />
       <ContactInfo />
-      <MapSection />
+      {/* <MapSection /> */}
       <FaqSection />
       <Footer/>
     </main>

@@ -73,11 +73,11 @@ export default function ServiceCards() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
-            Our Premium Services
+          Your Complete GradeNext Learning Ecosystem 
           </h2>
           <p className="text-lg text-gray-600">
-            Explore our comprehensive range of educational technology services designed to transform the learning
-            experience.
+          Explore our comprehensive range of educational technology services designed to transform 
+          the learning experience. 
           </p>
         </motion.div>
 

@@ -18,7 +18,7 @@ export default function FeaturesSection() {
   const features = [
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Rapid Implementation",
+      title: "AI-Powered Personalization",
       description: "Get up and running quickly with our streamlined onboarding process and dedicated support team.",
       color: "bg-blue-100",
       iconColor: "text-blue-600",
@@ -72,14 +72,14 @@ export default function FeaturesSection() {
               transition={{ duration: 0.5 }}
             >
               <div className="inline-block px-4 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-6">
-                Why Choose Us
+              Why Choose GradeNext? 
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
-                Features That Make Us Different
+              Experience the Future of Personalized Education 
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Our platform combines cutting-edge technology with proven educational methodologies to deliver an
-                unparalleled learning experience.
+              Our platform uniquely blends the power of artificial intelligence with insights from leading 
+              educational institutions to create a learning experience that is truly tailored to you. 
               </p>
             </motion.div>
 
