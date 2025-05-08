@@ -63,7 +63,7 @@ export default function ServiceCards() {
   const [activeService, setActiveService] = useState(services[0].id)
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -141,13 +141,7 @@ export default function ServiceCards() {
                           </motion.li>
                         ))}
                       </ul>
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`px-6 py-3 rounded-full bg-gradient-to-r ${service.color} text-white font-medium shadow-md hover:shadow-lg transition-shadow`}
-                      >
-                        Learn More
-                      </motion.button>
+                      
                     </div>
                   </motion.div>
                 ),

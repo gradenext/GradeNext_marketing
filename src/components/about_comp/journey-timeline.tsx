@@ -167,14 +167,14 @@ export default function EducationalImpact() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div 
+          {/* <motion.div 
             variants={fadeInUpVariants}
             className="mt-16 text-center"
           >
             <button className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
               Learn How We Can Help You
             </button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

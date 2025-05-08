@@ -51,7 +51,7 @@ export default function ServicesCTA() {
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full border-2 border-white/70 text-white hover:bg-white/10 px-8 py-6 text-lg"
+              className="rounded-full border-2 text-black border-white/70  hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
             >
               Schedule a Demo
             </Button>

@@ -143,13 +143,23 @@ export default function PlatformFeatures() {
     )
   }
 
+
+  function IconWrapper(props: BrainProps & { className?: string }) {
+    if (typeof features[activeFeature].icon === 'function') {
+      return features[activeFeature].icon(props);
+    } else {
+      return React.createElement(features[activeFeature].icon, props);
+    }
+  }
+
+
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -221,7 +231,7 @@ export default function PlatformFeatures() {
                   alt={features[activeFeature].title}
                   width={600}
                   height={600}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20"></div>
               </div>
@@ -231,7 +241,7 @@ export default function PlatformFeatures() {
             <motion.div variants={fadeInUpVariants} className="order-1 md:order-2">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 flex items-center justify-center mr-4">
-                  {React.createElement(features[activeFeature].icon, { className: "text-emerald-600 w-6 h-6" })}
+      <IconWrapper className="text-emerald-600 w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold text-emerald-700">{features[activeFeature].title}</h3>
               </div>
@@ -251,14 +261,14 @@ export default function PlatformFeatures() {
                 ))}
               </div>
 
-              <motion.div 
+              {/* <motion.div 
                 variants={fadeInUpVariants}
                 className="mt-8"
               >
                 <button className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
                   Learn More About {features[activeFeature].title}
                 </button>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
         </motion.div>

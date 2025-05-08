@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sparkles, Zap, BookOpen, Users } from "lucide-react"
+// import { Sparkles, Zap, BookOpen, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ServicesHero() {
@@ -49,7 +49,7 @@ export default function ServicesHero() {
       </div>
 
       {/* Floating elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ y: -100, x: -100, opacity: 0 }}
           animate={{ y: 0, x: 0, opacity: 1 }}
@@ -85,17 +85,17 @@ export default function ServicesHero() {
         >
           <Users className="w-10 h-10 text-pink-300" />
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 pt-4 container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
         >
-          GradeNext: Intelligent Learning Solutions
+       Intelligent Learning Solutions
         </motion.div>
 
         <motion.h1
@@ -114,7 +114,7 @@ export default function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
+          className=" md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
         >
           Discover our comprehensive suite of educational technology services designed to transform how students learn
           and educators teach.
@@ -150,7 +150,7 @@ export default function ServicesHero() {
       </div>
 
       {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute  -bottom-12 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
           <path
             fill="#ffffff"

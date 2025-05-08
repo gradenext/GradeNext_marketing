@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { BookOpen, Users, Award, Lightbulb } from "lucide-react"
+// import { BookOpen, Users, Award, Lightbulb } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function AboutHero() {
@@ -39,7 +39,7 @@ export default function AboutHero() {
       </div>
 
       {/* Floating icons */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -75,7 +75,7 @@ export default function AboutHero() {
         >
           <Lightbulb className="w-8 h-8 text-orange-300" />
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -105,7 +105,7 @@ export default function AboutHero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text- md:text-lg text-white/90 mb-10 max-w-3xl mx-auto"
         >
-          GradeNext uses cutting-edge AI to deliver adaptive, engaging learning pathways, unlocking each student's potential for success and deeper understanding.
+          GradeNext uses cutting-edge AI to deliver adaptive, engaging learning pathways, unlocking each student&apos;s potential for success and deeper understanding.
         </motion.p>
 
         {/* <motion.div
@@ -163,7 +163,7 @@ export default function AboutHero() {
       </div>
 
       {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute -bottom-12 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
           <path
             fill="#ffffff"

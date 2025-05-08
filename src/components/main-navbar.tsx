@@ -3,13 +3,32 @@
 import { useState, useEffect } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Sparkles, Home, Info, Briefcase, HelpCircle, Mail } from "lucide-react"
+import { Menu, X, Home, Info, Briefcase, HelpCircle, Mail } from "lucide-react"
 
 export default function MainNavbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
+
+  const [isTutorOpen, setisTutorOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    experience: '',
+  });
+
+  const handleInputChange = (e: { target: { name: unknown; value: unknown } }) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name as string]: value });  };
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setIsOpen(false);
+    setFormData({ name: '', email: '', subject: '', experience: '' });
+  };
 
   // Handle scroll effect
   useEffect(() => {
@@ -45,6 +64,78 @@ export default function MainNavbar() {
         isScrolled ? "bg-white shadow-md py-3" : "bg-white/80 backdrop-blur-sm py-5"
       }`}
     >
+         {isTutorOpen && (
+            <div className="fixed inset-0 flex items-center justify-center h-screen w-screen bg-black/50">
+              <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Tutor Application</h2>
+                <div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 mb-1" htmlFor="name">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 mb-1" htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 mb-1" htmlFor="subject">Subject Expertise</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 mb-1" htmlFor="experience">Years of Experience</label>
+                    <input
+                      type="number"
+                      id="experience"
+                      name="experience"
+                      value={formData.experience}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                      min="0"
+                    />
+                  </div>
+                  <div className="flex justify-end space-x-2">
+                    <button
+                      onClick={() => setisTutorOpen(false)}
+                      className="px-4 py-2 text-gray-600 bg-gray-200 rounded-lg hover:bg-gray-300 focus:outline-none"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleSubmit}
+                      className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -84,11 +175,10 @@ export default function MainNavbar() {
               Login
             </Button>
             <Button
-              onClick={() => console.log("Get Started clicked")}
+              onClick={() => setisTutorOpen(true)}
               className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
             >
-              <Sparkles className="w-4 h-4 mr-2" />
-              Get Started
+              Become a Tutor
             </Button>
           </div>
 
@@ -134,12 +224,13 @@ export default function MainNavbar() {
               Login
             </Button>
             <Button
-              onClick={() => console.log("Get Started clicked")}
+              onClick={() => setisTutorOpen(true)}
               className="rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
             >
-              <Sparkles className="w-4 h-4 mr-2" />
-              Get Started
+              Become a Tutor
             </Button>
+
+         
           </div>
         </div>
       </div>

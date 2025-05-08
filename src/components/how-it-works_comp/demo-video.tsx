@@ -45,13 +45,13 @@ export default function DemoVideo() {
                     onClick={handlePlay}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg"
+                    className="w-20 h-20 bg-white z-50 rounded-full flex items-center justify-center shadow-lg"
                   >
                     <Play className="w-8 h-8 text-blue-600 ml-1" />
                   </motion.button>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8 text-white">
+                <div className="absolute inset-0 z-40 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-8 z-40 left-8 right-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Platform Overview: Transforming Education</h3>
                   <p className="text-white/80">3:45 min</p>
                 </div>

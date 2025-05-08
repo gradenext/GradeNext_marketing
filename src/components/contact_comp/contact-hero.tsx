@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageSquare, Mail, Phone } from "lucide-react"
+// import { MessageSquare, Mail, Phone } from "lucide-react"
 
 export default function ContactHero() {
   return (
@@ -9,7 +9,7 @@ export default function ContactHero() {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700">
         {/* Animated shapes */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           {Array.from({ length: 5 }).map((_, i) => (
             <motion.div
               key={i}
@@ -31,14 +31,14 @@ export default function ContactHero() {
               }}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Decorative grid overlay */}
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:20px_20px]" />
       </div>
 
       {/* Floating icons */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -65,7 +65,7 @@ export default function ContactHero() {
         >
           <Phone className="w-8 h-8 text-emerald-300" />
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -99,7 +99,7 @@ export default function ContactHero() {
       </div>
 
       {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute -bottom-12 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
           <path
             fill="#ffffff"

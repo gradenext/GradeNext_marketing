@@ -74,7 +74,7 @@ const pricingPlans = [
 
 export default function PricingSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Animated gradient orbs */}
@@ -199,7 +199,7 @@ export default function PricingSection() {
         </div>
 
         {/* Bottom decorative element */}
-        <div className="mt-20 text-center relative">
+        {/* <div className="mt-20 text-center relative">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-white shadow-lg border border-slate-100">
             <span className="text-slate-600 mr-2">Need a custom plan?</span>
             <a href="#" className="text-violet-600 font-medium hover:text-violet-700 transition-colors">
@@ -208,7 +208,7 @@ export default function PricingSection() {
           </div>
 
           <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent rounded-full"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

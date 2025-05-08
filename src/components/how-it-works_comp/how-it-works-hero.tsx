@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Lightbulb, Zap, BookOpen } from "lucide-react"
+import { ArrowRight} from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function HowItWorksHero() {
@@ -10,7 +10,7 @@ export default function HowItWorksHero() {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700">
         {/* Animated particles */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
             <motion.div
               key={i}
@@ -31,14 +31,14 @@ export default function HowItWorksHero() {
               }}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Decorative grid overlay */}
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:20px_20px]" />
       </div>
 
       {/* Floating icons */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -65,7 +65,7 @@ export default function HowItWorksHero() {
         >
           <BookOpen className="w-8 h-8 text-emerald-300" />
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -95,7 +95,7 @@ export default function HowItWorksHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
+          className=" md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
         >
           Discover how our innovative platform transforms the educational experience through personalized learning,
           advanced analytics, and engaging content.
@@ -131,7 +131,7 @@ export default function HowItWorksHero() {
       </div>
 
       {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute -bottom-12 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
           <path
             fill="#ffffff"

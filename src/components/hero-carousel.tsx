@@ -51,7 +51,7 @@ export default function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 20000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, []) // Removed unnecessary dependency: currentSlide

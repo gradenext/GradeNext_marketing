@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MapPin, Phone, Mail, Clock, Globe } from "lucide-react"
+import { MapPin, Phone, Mail } from "lucide-react"
 
 export default function ContactInfo() {
   const contactMethods = [
@@ -26,20 +26,7 @@ export default function ContactInfo() {
       color: "bg-pink-100",
       iconColor: "text-pink-600",
     },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Working Hours",
-      details: ["Monday - Friday: 9AM - 6PM", "Saturday: 10AM - 4PM", "Sunday: Closed"],
-      color: "bg-emerald-100",
-      iconColor: "text-emerald-600",
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Offices",
-      details: ["New York • London", "Singapore • Sydney", "Toronto • Berlin"],
-      color: "bg-amber-100",
-      iconColor: "text-amber-600",
-    },
+ 
   ]
 
   return (
