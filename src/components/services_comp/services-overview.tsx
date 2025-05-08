@@ -63,7 +63,7 @@ export default function ServicesOverview() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: service.delay }}
               whileHover={{ y: -10 }}
-              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className={`rounded-2xl ${service.color} overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300`}
             >
               <div className={`${service.color} p-6 text-white`}>
                 <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">

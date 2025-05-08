@@ -2,7 +2,6 @@ import ContactForm from "@/components/contact_comp/contact-form"
 import ContactHero from "@/components/contact_comp/contact-hero"
 import ContactInfo from "@/components/contact_comp/contact-info"
 import FaqSection from "@/components/contact_comp/faq-section"
-import MapSection from "@/components/contact_comp/map-section"
 import Footer from "@/components/footer"
 
 

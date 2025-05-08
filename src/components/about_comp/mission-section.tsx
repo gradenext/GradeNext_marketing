@@ -61,7 +61,7 @@ export default function MissionSection() {
             </div>
             <h3 className="text-xl font-bold mb-4">Our Vision</h3>
             <p className="text-gray-600">
-              To be the leading platform that unlocks every student's potential through individually
+              To be the leading platform that unlocks every student&apos;s potential through individually
               tailored education, supported by cutting-edge technology and expert insights.
             </p>
           </motion.div>
@@ -80,7 +80,7 @@ export default function MissionSection() {
             <h3 className="text-xl font-bold mb-4">Our Approach</h3>
             <p className="text-gray-600">
               GradeNext integrates advanced AI algorithms with established pedagogical principles
-              to deliver dynamic learning experiences that adapt to each student's unique pace, strengths.
+              to deliver dynamic learning experiences that adapt to each student&apos;s unique pace, strengths.
             </p>
           </motion.div>
         </div>
