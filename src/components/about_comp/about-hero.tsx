@@ -5,6 +5,23 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
 export default function AboutHero() {
+
+  function smoothScrollToMission() {
+    const missionDiv = document.getElementById('mission');
+    console.log("object");
+    if (missionDiv) {
+      window.scrollTo({ top: missionDiv.offsetTop, behavior: 'smooth' });
+    }
+  }
+
+  function smoothScrollToTeam() {
+    const missionDiv = document.getElementById('team');
+    if (missionDiv) {
+      window.scrollTo({ top: missionDiv.offsetTop, behavior: 'smooth' });
+    }
+  }
+
+
   return (
     <section className="relative min-h-[100vh]  flex items-center justify-center overflow-hidden">
       {/* Animated background */}
@@ -141,7 +158,8 @@ export default function AboutHero() {
         >
           <Button
             size="lg"
-            className="relative overflow-hidden rounded-full bg-white text-emerald-600 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+            onClick={smoothScrollToMission}
+            className="relative z-30 overflow-hidden rounded-full bg-white text-emerald-600 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
             <span className="relative z-10 flex items-center">
               Our Mission
@@ -154,6 +172,7 @@ export default function AboutHero() {
 
           <Button
             size="lg"
+            onClick={smoothScrollToTeam}
             variant="outline"
             className="rounded-full border-2 text-black border-white/70 hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
           >

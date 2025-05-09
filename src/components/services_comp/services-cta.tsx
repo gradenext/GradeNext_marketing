@@ -3,8 +3,10 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 export default function ServicesCTA() {
+    const router = useRouter()
   return (
     <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
       <div className="container mx-auto px-4">
@@ -39,6 +41,7 @@ export default function ServicesCTA() {
           >
             <Button
               size="lg"
+              onClick={() => router.push("https://gradenext.netlify.app/")}
               className="relative overflow-hidden rounded-full bg-white text-indigo-600 px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:bg-gray-100 group"
             >
               <span className="relative z-10 flex items-center">
@@ -51,9 +54,10 @@ export default function ServicesCTA() {
             <Button
               size="lg"
               variant="outline"
+              onClick={() => router.push("https://youtube.com")}
               className="rounded-full border-2 text-black border-white/70  hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
             >
-              Schedule a Demo
+              Watch Demo
             </Button>
           </motion.div>
 

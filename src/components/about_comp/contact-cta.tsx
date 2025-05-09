@@ -3,8 +3,10 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 export default function ContactCTA() {
+  const router = useRouter()
   return (
     <section className="py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">
       <div className="container mx-auto px-4">
@@ -39,11 +41,13 @@ export default function ContactCTA() {
           >
             <Button
               size="lg"
+              onClick={() => window.open("https://youtube.com/")}
               className="relative overflow-hidden rounded-full bg-white text-emerald-600 px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:bg-gray-100"
             >
-              Schedule a Demo
+              Watch Demo
             </Button>
             <Button
+            onClick={() => router.push("/contact")}
               size="lg"
               variant="outline"
               className="rounded-full border-2 text-black border-white/70 hover:text-white hover:bg-white/10 px-8 py-6 text-lg"

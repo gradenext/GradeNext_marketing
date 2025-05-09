@@ -3,8 +3,16 @@
 import { motion } from "framer-motion"
 // import { Sparkles, Zap, BookOpen, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation";
 
 export default function ServicesHero() {
+  const router = useRouter()
+  function smoothScrollToFeatures() {
+    const missionDiv = document.getElementById('features');
+    if (missionDiv) {
+      window.scrollTo({ top: missionDiv.offsetTop, behavior: 'smooth' });
+    }
+  }
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Animated background */}
@@ -128,10 +136,11 @@ export default function ServicesHero() {
         >
           <Button
             size="lg"
+            onClick={smoothScrollToFeatures}
             className="relative overflow-hidden rounded-full bg-white text-indigo-600 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
             <span className="relative z-10 flex items-center">
-              Explore Services
+              Explore Features
               <motion.span className="ml-2" initial={{ x: 0 }} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 →
               </motion.span>
@@ -142,9 +151,10 @@ export default function ServicesHero() {
           <Button
             size="lg"
             variant="outline"
+            onClick={() => router.push("https://youtube.com")}
             className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
           >
-            Request Demo
+            Watch Demo
           </Button>
         </motion.div>
       </div>

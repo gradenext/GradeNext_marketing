@@ -1,29 +1,60 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { CheckCircle2, Loader2 } from "lucide-react"
+import type React from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { CheckCircle2, Loader2 } from "lucide-react";
 
 export default function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    const form = e.currentTarget;
+    const formData = {
+      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
+      lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      inquiry: (form.elements.namedItem("inquiry") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-  }
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An unexpected error occurred");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="py-20 bg-white">
@@ -88,7 +119,16 @@ export default function ContactForm() {
                 <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
                 <p className="text-gray-600 mb-8">Thank you for reaching out. Our team will get back to you shortly.</p>
                 <Button
-                  onClick={() => setIsSubmitted(false)}
+                  onClick={() => {
+                    setIsSubmitted(false);
+                    setError(null);
+                    (document.getElementById("firstName") as HTMLInputElement).value = "";
+                    (document.getElementById("lastName") as HTMLInputElement).value = "";
+                    (document.getElementById("email") as HTMLInputElement).value = "";
+                    (document.getElementById("phone") as HTMLInputElement).value = "";
+                    (document.getElementById("inquiry") as HTMLSelectElement).value = "";
+                    (document.getElementById("message") as HTMLTextAreaElement).value = "";
+                  }}
                   className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
                 >
                   Send Another Message
@@ -96,6 +136,9 @@ export default function ContactForm() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="text-red-500 text-sm text-center">{error}</div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="text-sm font-medium">
@@ -103,6 +146,7 @@ export default function ContactForm() {
                     </label>
                     <Input
                       id="firstName"
+                      name="firstName"
                       placeholder="John"
                       required
                       className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
@@ -115,6 +159,7 @@ export default function ContactForm() {
                     </label>
                     <Input
                       id="lastName"
+                      name="lastName"
                       placeholder="Doe"
                       required
                       className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
@@ -128,6 +173,7 @@ export default function ContactForm() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="john.doe@example.com"
                     required
@@ -141,6 +187,7 @@ export default function ContactForm() {
                   </label>
                   <Input
                     id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="+1 (555) 123-4567"
                     className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
@@ -151,7 +198,7 @@ export default function ContactForm() {
                   <label htmlFor="inquiry" className="text-sm font-medium">
                     Inquiry Type
                   </label>
-                  <Select>
+                  <Select name="inquiry" defaultValue="">
                     <SelectTrigger className="border-gray-300 focus:border-purple-500 focus:ring-purple-500">
                       <SelectValue placeholder="Select an inquiry type" />
                     </SelectTrigger>
@@ -171,6 +218,7 @@ export default function ContactForm() {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Tell us how we can help you..."
                     rows={5}
                     required
@@ -198,6 +246,5 @@ export default function ContactForm() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

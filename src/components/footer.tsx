@@ -7,9 +7,9 @@ import { FiInstagram, FiLinkedin, FiTwitter, FiYoutube } from "react-icons/fi"
 
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "FAQs", href: "/faqs" },
+  { name: "Services", href: "/services" },
   { name: "Price Plan", href: "/pricing" },
-  { name: "Features", href: "/features" },
+  { name: "How It Works", href: "/how-it-works" },
   // { name: "Careers", href: "/careers" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },

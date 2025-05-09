@@ -3,8 +3,10 @@
 import { motion } from "framer-motion"
 import { ArrowRight} from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 export default function HowItWorksHero() {
+    const router = useRouter()
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Animated background */}
@@ -109,6 +111,7 @@ export default function HowItWorksHero() {
         >
           <Button
             size="lg"
+            onClick={() => router.push("https://gradenext.netlify.app/")}
             className="relative overflow-hidden rounded-full bg-white text-blue-600 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
             <span className="relative z-10 flex items-center">
@@ -123,6 +126,7 @@ export default function HowItWorksHero() {
           <Button
             size="lg"
             variant="outline"
+            onClick={() => router.push("https://youtube.com")}
             className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
           >
             Watch Demo

@@ -45,6 +45,12 @@ export default function MainNavbar() {
     setIsOpen(false)
   }, [pathname])
 
+  const handleTutorOpen = () => {
+    setIsOpen(false); // Close the menu
+    setisTutorOpen(true);
+  };
+  
+
   const navItems = [
     { href: "/", label: "Home", icon: <Home className="w-4 h-4 mr-2" /> },
     { href: "/about", label: "About", icon: <Info className="w-4 h-4 mr-2" /> },
@@ -60,7 +66,7 @@ export default function MainNavbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md py-3" : "bg-white/80 backdrop-blur-sm py-5"
       }`}
     >
@@ -168,14 +174,14 @@ export default function MainNavbar() {
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
-              onClick={() => console.log("Login clicked")}
+              onClick={() => router.push("https://gradenext.netlify.app/")}
               variant="outline"
               className="rounded-full border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
             >
               Login
             </Button>
             <Button
-              onClick={() => setisTutorOpen(true)}
+               onClick={handleTutorOpen}
               className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
             >
               Become a Tutor
@@ -224,7 +230,7 @@ export default function MainNavbar() {
               Login
             </Button>
             <Button
-              onClick={() => setisTutorOpen(true)}
+               onClick={handleTutorOpen}
               className="rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
             >
               Become a Tutor
