@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+// import Image from "next/image"
 import { Github, Linkedin, Twitter } from "lucide-react"
 
 export default function TeamSection() {
@@ -63,9 +63,9 @@ export default function TeamSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="relative h-80 w-full">
+              {/* <div className="relative h-80 w-full">
                 <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-              </div>
+              </div> */}
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                 <p className="text-violet-600 font-medium mb-4">{member.role}</p>

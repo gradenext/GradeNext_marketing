@@ -10,6 +10,7 @@ import {
   AnimatedRecommendedBadge,
   AnimatedButton,
 } from "./client-components"
+import Link from "next/link";
 
 const pricingPlans = [
   {
@@ -180,18 +181,19 @@ export default function PricingSection() {
                       </div>
                     ))}
                   </div>
-
+<Link href="https://gradenext.netlify.app/">
                   <AnimatedButton
                     className={`w-full transition-all relative overflow-hidden
                       ${
                         plan.recommended
-                          ? `bg-gradient-to-r ${plan.gradient} hover:shadow-lg hover:shadow-violet-500/20 text-white`
-                          : `bg-gradient-to-r ${plan.gradient} hover:shadow-lg text-white`
+                        ? `bg-gradient-to-r ${plan.gradient} hover:shadow-lg hover:shadow-violet-500/20 text-white`
+                        : `bg-gradient-to-r ${plan.gradient} hover:shadow-lg text-white`
                       }`}
-                  >
+                      >
                     <span className="relative z-10">{plan.buttonText}</span>
                     <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                   </AnimatedButton>
+                    </Link>
                 </div>
               </div>
             </AnimatedPricingCard>
