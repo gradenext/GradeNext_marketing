@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Home, Info, Briefcase, HelpCircle, Mail } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function MainNavbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -145,13 +147,10 @@ export default function MainNavbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <button
-              onClick={() => handleNavigation("/")}
-              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600"
-            >
-              EdTech
-            </button>
+          <div className="">
+            <Link href="/" className="flex items-center">
+              <Image src="/logo.png" alt="Logo" width={100} height={20} />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

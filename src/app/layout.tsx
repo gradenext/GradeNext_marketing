@@ -7,7 +7,7 @@ import MainNavbar from "@/components/main-navbar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "EdTech Platform",
+  title: "Gradenext",
   description: "Innovative educational technology platform for modern learning",
 }
 

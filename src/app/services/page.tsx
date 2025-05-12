@@ -8,7 +8,7 @@ import ServicesOverview from "@/components/services_comp/services-overview"
 
 
 export const metadata = {
-  title: "Our Services | EdTech Platform",
+  title: "Our Services | Gradenext",
   description: "Explore our comprehensive range of educational technology services designed to transform learning experiences.",
 }
 

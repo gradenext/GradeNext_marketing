@@ -8,7 +8,7 @@ import ProcessSteps from "@/components/how-it-works_comp/process-steps"
 
 
 export const metadata = {
-  title: "How It Works | EdTech Platform",
+  title: "How It Works | Gradenext",
   description: "Learn how our educational technology platform works and transforms the learning experience.",
 }
 

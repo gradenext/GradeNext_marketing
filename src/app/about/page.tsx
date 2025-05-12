@@ -8,7 +8,7 @@ import Footer from "@/components/footer"
 
 
 export const metadata = {
-  title: "About Us | EdTech Platform",
+  title: "About Us | Gradenext",
   description: "Learn about our mission, values, and the team behind our educational technology platform.",
 }
 
