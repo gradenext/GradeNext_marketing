@@ -173,7 +173,7 @@ export default function MainNavbar() {
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
-              onClick={() => router.push("https://gradenext.netlify.app/")}
+              onClick={() => router.push("https://app.gradenext.com/")}
               variant="outline"
               className="rounded-full border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
             >

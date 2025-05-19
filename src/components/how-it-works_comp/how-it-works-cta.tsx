@@ -41,7 +41,7 @@ export default function HowItWorksCTA() {
           >
             <Button
               size="lg"
-              onClick={() => router.push("https://gradenext.netlify.app/")}
+              onClick={() => router.push("https://app.gradenext.com/")}
               className="relative overflow-hidden rounded-full bg-white text-blue-600 px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:bg-gray-100 group"
             >
               <span className="relative z-10 flex items-center">

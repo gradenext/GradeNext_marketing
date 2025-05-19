@@ -181,7 +181,7 @@ export default function PricingSection() {
                       </div>
                     ))}
                   </div>
-<Link href="https://gradenext.netlify.app/">
+<Link href="https://app.gradenext.com/">
                   <AnimatedButton
                     className={`w-full transition-all relative overflow-hidden
                       ${
