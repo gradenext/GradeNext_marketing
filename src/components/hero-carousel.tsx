@@ -9,7 +9,7 @@ const slides = [
   {
     id: 4,
     backgroundImage: "https://images.unsplash.com/photo-1490424660416-359912d314b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heading: "Master Learning with AI-Powered Education",
+    heading: "AI-Driven After School Learning Platforms: Adaptive Learning and Performance Tracking Through Artificial Intelligence. ",
     subheading: "",
     paragraph:
       "Unlock personalized learning with real-time AI insights. Stay on track with adaptive practice, smart revisions, and interactive challenges designed for your success.",
@@ -17,7 +17,7 @@ const slides = [
   },{
     id: 1,
     backgroundImage: "https://images.unsplash.com/photo-1602542165989-999c53234fdd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heading: "Stanford & Havard University",
+    heading: "Reimagining Math, Science and English Learning Art with Stanford and Harvard Universities Experts.",
     subheading: "Built with Expert Guidance ",
     paragraph:
       "Developed with insights from top educators and researchers, Grade Next integrates proven learning methodologies to enhance student success.",
@@ -26,21 +26,13 @@ const slides = [
   {
     id: 2,
     backgroundImage: "https://images.unsplash.com/photo-1617117206620-b01f2919ff86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heading: "McGill University ",
+    heading: "Building Students Future with Developing Computational Thinking Through Programming",
     subheading: "Empowering Education with Innovation",
     paragraph:
       "In collaboration with McGill University experts, Grade Next incorporates cutting-edge ducational research to create an engaging and effective learning experience for students worldwide.",
     buttonLink: "/harvard-partnership",
   },
-  {
-    id: 3,
-    backgroundImage: "https://images.unsplash.com/photo-1581726707445-75cbe4efc586?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    heading: "The University of Tokyo ",
-    subheading: "Advancing Learning with Excellence",
-    paragraph:
-      "With insights from leading researchers at The University of Tokyo, Grade Next integrates innovative learning strategies to enhance student engagement, critical thinking, and academic growth.",
-    buttonLink: "/mit-partnership",
-  },
+ 
 ]
 
 export default function HeroCarousel() {
@@ -51,7 +43,7 @@ export default function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 3000)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, []) // Removed unnecessary dependency: currentSlide
@@ -77,14 +69,14 @@ export default function HeroCarousel() {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 h-full w-full transition-opacity duration-500 ease-in-out ${
+          className={`absolute inset-0 h-full bg-gradient-to-br from-purple-500 to-purple-700 w-full transition-opacity duration-500 ease-in-out ${
             currentSlide === index ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
           }`}
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.backgroundImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          // style={{
+          //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.backgroundImage})`,
+          //   backgroundSize: "cover",
+          //   backgroundPosition: "center",
+          // }}
         >
           <div className="container max-w-7xl mx-auto h-full px-4 flex flex-col justify-center">
             <div
@@ -93,16 +85,16 @@ export default function HeroCarousel() {
               }`}
             >
               <h3 className="text-white text-xl md:text-2xl font-medium mb-2 animate-fadeIn">{slide.subheading}</h3>
-              <h2 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-slideUp">
+              <h2 className="text-white text-lg md:text-xl lg:text-5xl font-bold mb-4 animate-slideUp">
                 {slide.heading}
               </h2>
               <p className="text-white text-lg md:text-xl mb-6 max-w-xl animate-fadeIn">{slide.paragraph}</p>
-              <Link
+              {/* <Link
                 href={slide.buttonLink}
                 className="inline-block bg-blue-400 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 animate-fadeIn"
               >
                 Read More
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

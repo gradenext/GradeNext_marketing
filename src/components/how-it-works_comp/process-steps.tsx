@@ -101,7 +101,7 @@ export default function ProcessSteps() {
               <div className={`order-2 ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
                 <div className="relative">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                    <Image src={step.image || "/placeholder.svg"} alt={step.title} fill className="object-cover" />
+                    {/* <Image src={step.image || "/placeholder.svg"} alt={step.title} fill className="object-cover" /> */}
                     <div
                       className={`absolute inset-0 bg-gradient-to-tr ${step.color} opacity-30 mix-blend-overlay`}
                     ></div>

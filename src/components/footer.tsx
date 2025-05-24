@@ -62,9 +62,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Get In Touch</h3>
             <div className="space-y-4">
-              <p className="text-gray-600">support@pagedone.com</p>
-              <p className="text-gray-600">+91 945 658 3256</p>
-              <p className="text-gray-600">61-A, Elm street, Gujarat, India.</p>
+              <p className="text-gray-600">support@GradeNext.com</p>
+              <p className="text-gray-600">+12404418984 </p>
+              <p className="text-gray-600">620 Veterans Blvd, Unit 525, Redwood City, CA, 94063</p>
             </div>
           </div>
 

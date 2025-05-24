@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import PricingSection from "@/components/PricingSection";
 import StickyScroll from "@/components/StickyScroll";
 import SurfCarousel from "@/components/testimonial-carousel";
-import SustainableSection from "@/components/mesh-stats";
+// import SustainableSection from "@/components/mesh-stats";
 // import OpeningScreen from "@/components/opening-screen";
 import VerticalAccordion from "@/components/VerticalAccordion";
 import HeroCarousel from "@/components/hero-carousel";
@@ -21,7 +21,7 @@ export default function Home() {
       {/* <OpeningScreen /> */}
       <VerticalAccordion />
 
-      <SustainableSection />
+      {/* <SustainableSection /> */}
       <StickyScroll />
       {/* <TextParallaxContentExample /> */}
 <ComparisonTable/>

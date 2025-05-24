@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
       <ProcessSteps />
       <DemoVideo />
       <BenefitsSection />
-      <FaqSection />
+      {/* <FaqSection /> */}
       <HowItWorksCTA />
       <Footer/>
     </main>

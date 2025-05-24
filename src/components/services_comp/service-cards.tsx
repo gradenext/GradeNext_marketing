@@ -115,12 +115,12 @@ export default function ServiceCards() {
                     className="grid grid-cols-1 lg:grid-cols-2"
                   >
                     <div className="relative h-64 lg:h-auto">
-                      <Image
+                      {/* <Image
                         src={service.image || "/placeholder.svg"}
                         alt={service.title}
                         fill
                         className="object-cover"
-                      />
+                      /> */}
                       <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-40`}></div>
                     </div>
                     <div className="p-8 lg:p-12">

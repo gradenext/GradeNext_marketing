@@ -107,12 +107,12 @@ export default function FeaturesSection() {
 
           <motion.div style={{ y, opacity }} className="relative">
             <div className="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
                 alt="Educational technology in action"
                 fill
                 className="object-cover"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/50 to-transparent" />
             </div>
 

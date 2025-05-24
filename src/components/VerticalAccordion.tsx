@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 const items = [
   {
     id: 0,
-    title: "AI-Powered Adaptive Learning & Performance Tracking",
+    title: "Intelligent Education System",
     color: "bg-red-500",
     hoverColor: "group-hover:bg-red-600",
     textColor: "text-red-50",
@@ -17,17 +17,17 @@ const items = [
     lightColor: "from-red-500/10 to-red-600/10",
     image: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=2071&auto=format&fit=crop",
     description:
-      "Grade Next ensures that learning is tailored to each student’s needs through AI-driven adaptive questioning. As students progress, the system dynamically adjusts the difficulty level, reinforcing weaker concepts before moving forward. AI-powered insights from weekly and community tests provide structured assessments, enabling students to measure growth, identify improvement areas, and stay motivated. The leader dashboard showcases individual and peer performance, fostering a competitive and goal-driven learning environment.",
+      "Unlock the future of your kid’s education with an AI-driven platform that personalizes learning and tracks student progress in real time. GradeNext offers a personalized, adaptive learning experience that dynamically adjusts to each student’s individual pace, learning style, and performance to stays on the path to success.",
     features: [
       "Personalized practice sessions for better comprehension",
       "Step-by-step learning to master key concepts",
-      "Interactive exercises for skill enhancement",
+      "frappéInteractive exercises for skill enhancement",
       "Continuous progress tracking and improvement",
     ],
     content: {
-      subtitle: "Personalized Questioning & Progress Insights",
+      subtitle: "Personalized 1:1 Tutor Support",
       description:
-        "Effective learning requires consistent reinforcement, and Grade Next’s AI-powered smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional AI-driven practice sessions are introduced to solidify understanding before moving forward..",
+        "Effective learning requires consistent reinforcement, and Grade Next’s AI-powered smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional AI-driven practice sessions are introduced to solidify understanding before moving forward.",
       stats: [
         { label: "Skill Improvement", value: "94%" },
         { label: "Concept Mastery", value: "91%" },
@@ -37,7 +37,7 @@ const items = [
   },
   {
     id: 1,
-    title: "Expert Tutor Support & Guidance",
+    title: "Future-Ready Skills",
     color: "bg-blue-500",
     hoverColor: "group-hover:bg-blue-600",
     textColor: "text-blue-50",
@@ -45,12 +45,12 @@ const items = [
     lightColor: "from-blue-500/10 to-blue-600/10",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
     description:
-      "Learn Through Real-World Applications & Hands-on Practice. Gain a deeper understanding of concepts with practical applications, experiments, and structured problem-solving methods designed to boost critical thinking.",
+      "Provide students with the individualized support they need to succeed. Through our one-on-one tutoring support, each learner is paired with a dedicated tutor who tailors instruction to their specific strengths, pace, and academic objectives. ",
     features: [
-      "Hands-on activities and real-world problem-solving",
-      "Conceptual learning beyond traditional methods",
-      "Application-based exercises for deeper insight",
-      "Encouraging curiosity and analytical thinking",
+      "	Problem solving in real time at flexible schedule",
+      "	Conceptual learning beyond traditional methods",
+      "	Learning tricks of solving complex problem in seconds",
+      "	Tailored instruction for every learner to succeed inside as well as outside the class.",
     ],
     content: {
       subtitle: "Personalized Assistance & Concept Clarity",
@@ -101,7 +101,8 @@ const VerticalAccordionWithPopup = () => {
   useEffect(() => {
     let interval: NodeJS.Timeout
 
-    if (isAutoPlaying) {
+    // Disable auto-play on small screens
+    if (isAutoPlaying && window.innerWidth >= 640) {
       interval = setInterval(() => {
         setActiveItem((prev) => (prev + 1) % items.length)
       }, 5000)
@@ -114,13 +115,9 @@ const VerticalAccordionWithPopup = () => {
     }
   }, [isAutoPlaying])
 
-  const handleMouseEnter = (id: number) => {
+  const handleItemClick = (id: number) => {
     setIsAutoPlaying(false)
     setActiveItem(id)
-  }
-
-  const handleMouseLeave = () => {
-    setIsAutoPlaying(true)
   }
 
   const handleLearnMore = (id: number) => {
@@ -130,41 +127,43 @@ const VerticalAccordionWithPopup = () => {
 
   return (
     <>
-        <h1 className="pt-12 lg:pt-32 pb-12 text-4xl font-bold text-center">The GradeNext Programme</h1>
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-4 md:gap-6 justify-center min-h-screen p-2">
+      <h1 className="pt-8 sm:pt-12 lg:pt-32 pb-8 sm:pb-12 text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
+        The GradeNext Programme
+      </h1>
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-2 sm:gap-4 lg:gap-6 justify-center min-h-[50vh] sm:min-h-screen p-2 sm:p-4">
         {items.map((item) => (
           <div
             key={item.id}
             className={`group flex flex-col items-center justify-center
             ${
               activeItem === item.id
-                ? "lg:w-[800px] h-[550px] md:h-[500px] lg:h-[600px]"
-                : "lg:w-32 h-24 md:h-28 lg:h-[600px]"
+                ? "h-[400px] sm:h-[450px] lg:h-[600px] lg:w-[800px]"
+                : "h-20 sm:h-24 lg:h-[600px] lg:w-24"
             } 
-            w-full rounded-2xl lg:rounded-3xl duration-500 transition-all relative overflow-hidden ${item.color}
-            hover:shadow-2xl cursor-pointer`}
-            onMouseEnter={() => handleMouseEnter(item.id)}
-            onMouseLeave={handleMouseLeave}
+            w-full rounded-xl sm:rounded-2xl lg:rounded-3xl duration-500 transition-all relative overflow-hidden ${item.color}
+            hover:shadow-xl cursor-pointer`}
+            onClick={() => handleItemClick(item.id)}
           >
             {/* Background Image with Overlay */}
             <div
               className={`absolute inset-0 transition-opacity duration-500
             ${activeItem === item.id ? "opacity-100" : "opacity-0"}`}
             >
-              <Image
+              {/* <Image
                 src={item.image || "/placeholder.svg?height=600&width=800"}
                 alt={item.title}
                 fill
                 className="object-cover"
                 priority={item.id === 0}
-              />
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              /> */}
               <div className={`absolute inset-0 bg-gradient-to-b from-black/60 to-transparent`} />
             </div>
 
             {/* Content Container */}
             <div className="relative w-full h-full flex flex-col">
-              {/* Title - Different positioning for mobile and desktop */}
-              <h1
+              {/* Title */}
+             <h1
                 className={`
                 absolute transition-all duration-500 font-bold tracking-wider ${item.textColor}
                 ${
@@ -182,29 +181,28 @@ const VerticalAccordionWithPopup = () => {
                 className={`
                 transition-all duration-500 delay-200 absolute 
                 ${activeItem === item.id ? "opacity-100" : "opacity-0"}
-                lg:top-32 lg:left-10 lg:right-10
-                top-20 left-6 right-6
+                left-4 sm:left-6 lg:left-10 right-4 sm:right-6 lg:right-10 top-16 sm:top-20 lg:top-32
               `}
               >
                 <p
-                  className={`text-base lg:text-lg font-medium my-4 lg:mb-6 ${item.textColor}
+                  className={`text-sm sm:text-base lg:text-lg font-medium my-3 sm:my-4 lg:mb-6 ${item.textColor}
                 ${activeItem === item.id ? "block" : "hidden"}`}
                 >
                   {item.description}
                 </p>
 
-                <div className="space-y-2 lg:space-y-4">
+                <div className="space-y-1 sm:space-y-2 lg:space-y-4">
                   {item.features.map((feature, idx) => (
                     <motion.div
                       key={idx}
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: activeItem === item.id ? 0 : -20, opacity: activeItem === item.id ? 1 : 0 }}
                       transition={{ delay: 0.1 * idx }}
-                      className={`flex items-center gap-2 lg:gap-3
+                      className={`flex items-center gap-2
                       ${activeItem === item.id ? "block" : "hidden"}`}
                     >
-                      <ArrowRight className={`w-4 h-4 lg:w-5 lg:h-5 ${item.textColor}`} />
-                      <span className={`${item.textColor} text-sm lg:text-base`}>{feature}</span>
+                      <ArrowRight className={`w-3 sm:w-4 lg:w-5 h-3 sm:h-4 lg:h-5 ${item.textColor}`} />
+                      <span className={`${item.textColor} text-xs sm:text-sm lg:text-base`}>{feature}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -215,8 +213,8 @@ const VerticalAccordionWithPopup = () => {
                   transition={{ delay: 0.4 }}
                   onClick={() => handleLearnMore(item.id)}
                   className={`
-                  mt-6 lg:mt-8 px-4 lg:px-6 py-2 rounded-full border-2 border-current
-                  bg-white hover:scale-95 transition-all text-gray-900 duration-300 text-sm lg:text-base
+                  mt-4 sm:mt-6 lg:mt-8 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full border-2 border-current
+                  bg-white hover:scale-95 transition-all text-gray-900 duration-300 text-xs sm:text-sm lg:text-base
                   ${activeItem === item.id ? "block" : "hidden"}
                 `}
                 >
@@ -235,7 +233,7 @@ const VerticalAccordionWithPopup = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-white overflow-y-auto"
+            className="fixed inset-0 z-[9999] bg-white overflow-y-auto"
           >
             {items.map(
               (item) =>
@@ -249,20 +247,20 @@ const VerticalAccordionWithPopup = () => {
                         setSelectedItem(null)
                         setIsAutoPlaying(true)
                       }}
-                      className="fixed top-4 right-4 md:top-8 md:right-8 z-50 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                      className="fixed top-2 sm:top-4 right-2 sm:right-4 z-50 p-2 rounded-full hover:bg-gray-100 transition-colors"
                     >
-                      <X className="w-6 h-6" />
+                      <X className="w-5 sm:w-6 h-5 sm:h-6" />
                     </motion.button>
 
-                    <div className="container mx-auto px-4 py-24">
+                    <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24">
                       <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
                           {/* Content */}
                           <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="space-y-8"
+                            className="space-y-6 sm:space-y-8"
                           >
                             <div>
                               <motion.div
@@ -270,14 +268,14 @@ const VerticalAccordionWithPopup = () => {
                                 animate={{ opacity: 0.1 }}
                                 className={`absolute top-0 left-0 w-full h-full bg-gradient-to-br ${item.gradientColor}`}
                               />
-                              <h1 className="text-4xl md:text-5xl font-bold mb-4">{item.title}</h1>
-                              <p className="text-xl text-gray-600">{item.content.subtitle}</p>
+                              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-3 sm:mb-4">{item.title}</h1>
+                              <p className="text-base sm:text-lg lg:text-xl text-gray-600">{item.content.subtitle}</p>
                             </div>
 
-                            <p className="text-gray-600 text-lg leading-relaxed">{item.content.description}</p>
+                            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">{item.content.description}</p>
 
                             {/* Stats */}
-                            <div className="grid grid-cols-3 gap-8">
+                            <div className="grid grid-cols-3 gap-4 sm:gap-8">
                               {item.content.stats.map((stat, index) => (
                                 <motion.div
                                   key={stat.label}
@@ -287,11 +285,11 @@ const VerticalAccordionWithPopup = () => {
                                   className="text-center"
                                 >
                                   <div
-                                    className={`text-2xl font-bold bg-gradient-to-r ${item.gradientColor} bg-clip-text text-transparent`}
+                                    className={`text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r ${item.gradientColor} bg-clip-text text-transparent`}
                                   >
                                     {stat.value}
                                   </div>
-                                  <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+                                  <div className="text-xs sm:text-sm lg:text-sm text-gray-600 mt-1">{stat.label}</div>
                                 </motion.div>
                               ))}
                             </div>
@@ -302,10 +300,10 @@ const VerticalAccordionWithPopup = () => {
                               transition={{ delay: 0.6 }}
                             >
                               <Button
-                                className={`bg-gradient-to-r ${item.gradientColor} text-white px-8 py-6 rounded-xl text-lg hover:opacity-90 transition-opacity`}
+                                className={`bg-gradient-to-r ${item.gradientColor} text-white px-6 sm:px-8 py-4 sm:py-6 rounded-xl text-base sm:text-lg hover:opacity-90 transition-opacity`}
                               >
                                 Get Started
-                                <ArrowRight className="ml-2 h-5 w-5" />
+                                <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                               </Button>
                             </motion.div>
                           </motion.div>
@@ -317,14 +315,14 @@ const VerticalAccordionWithPopup = () => {
                             transition={{ delay: 0.3 }}
                             className="relative"
                           >
-                            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-                              <Image
+                            <div className="relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden">
+                              {/* <Image
                                 src={item.image || "/placeholder.svg?height=600&width=800"}
                                 alt={item.title}
                                 fill
                                 className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                              />
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                              /> */}
                               {/* Gradient overlay */}
                               <div
                                 className={`absolute inset-0 bg-gradient-to-br ${item.lightColor} mix-blend-multiply`}
@@ -333,10 +331,10 @@ const VerticalAccordionWithPopup = () => {
 
                             {/* Decorative elements */}
                             <div
-                              className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${item.gradientColor} rounded-full opacity-50`}
+                              className={`absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br ${item.gradientColor} rounded-full opacity-50`}
                             />
                             <div
-                              className={`absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br ${item.gradientColor} rounded-full opacity-80`}
+                              className={`absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-20 sm:w-32 h-20 sm:h-32 bg-gradient-to-br ${item.gradientColor} rounded-full opacity-80`}
                             />
                           </motion.div>
                         </div>
@@ -353,4 +351,3 @@ const VerticalAccordionWithPopup = () => {
 }
 
 export default VerticalAccordionWithPopup
-

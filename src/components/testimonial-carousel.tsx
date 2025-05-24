@@ -242,12 +242,12 @@ export default function SurfCarousel() {
                     className="flex-[0_0_100%] max-w-lg mx-auto lg:px-4"
                   >
                     <div className="relative aspect-[3/4] lg:aspect-[4/5] overflow-hidden rounded-3xl shadow-xl group">
-                      <Image
+                      {/* <Image
                         src={course.image || "/placeholder.svg"}
                         alt={course.title}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+                      /> */}
 
                       {/* Colorful overlay gradient */}
                       <div className={`absolute inset-0 bg-gradient-to-b ${course.color} opacity-60`} />
@@ -274,14 +274,14 @@ export default function SurfCarousel() {
                           <h3 className="text-2xl font-bold mb-4 text-slate-800">{course.title}</h3>
                           <div className="flex items-center space-x-3">
                             <div className="relative">
-                              <Image
+                              {/* <Image
                                 src={course.instructor.avatar || "/placeholder.svg"}
                                 alt={course.instructor.name}
                                 width={48}
                                 height={48}
                                 className="rounded-full h-12 w-12 object-cover border-2 border-white shadow-md"
-                              />
-                              <div className="absolute -bottom-1 -right-1 bg-green-500 h-3 w-3 rounded-full border-2 border-white"></div>
+                              /> */}
+                              {/* <div className="absolute -bottom-1 -right-1 bg-green-500 h-3 w-3 rounded-full border-2 border-white"></div> */}
                             </div>
                             <div>
                               <div className="text-sm font-medium text-slate-800">{course.instructor.name}</div>

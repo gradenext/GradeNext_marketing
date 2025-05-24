@@ -39,6 +39,8 @@ const pricingPlans = [
     description: "Best for dedicated learners seeking structured progress.",
     features: [
       { name: "Full course access", included: true },
+      { name: "1:1 tutor support on additional nominal cost", included: true },
+      { name: "Topic wise unlimited practice & revision exercises", included: true },
       { name: "Unlimited practice & revision exercises", included: true },
       { name: "Weekly and advanced tests", included: true },
       { name: "Personalized learning insights", included: true },
@@ -53,12 +55,15 @@ const pricingPlans = [
     shadowColor: "rgba(139, 92, 246, 0.25)",
   },
   {
-    name: "Enterprise",
+    name: "Advance",
     price: "Contact ",
     period: " us",
-    description: "Best for institutions and large teams.",
+    description: "Best for advance learner for competitive exams",
     features: [
       { name: "Unlimited course access", included: true },
+      { name: "Custom design advancing learning program", included: true },
+      { name: "Dedicated personalized 1:1 tutor support", included: true },
+      { name: "Advanced analytics, goal tracking & reports", included: true },
       { name: "Custom learning paths", included: true },
       { name: "Dedicated tutor support", included: true },
       { name: "Advanced analytics & reports", included: true },

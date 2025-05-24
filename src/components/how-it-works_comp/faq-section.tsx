@@ -226,13 +226,13 @@ export default function PlatformFeatures() {
               className="order-2 md:order-1"
             >
               <div className="relative rounded-xl overflow-hidden shadow-xl">
-                <Image 
+                {/* <Image 
                   src={features[activeFeature].image} 
                   alt={features[activeFeature].title}
                   width={600}
                   height={600}
                   className="w-full h-96 object-cover"
-                />
+                /> */}
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20"></div>
               </div>
             </motion.div>

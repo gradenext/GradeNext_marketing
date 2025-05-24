@@ -92,15 +92,10 @@ const companies = [
     color: "from-purple-500 to-violet-600",
     lightColor: "from-purple-50 to-violet-50",
   },
-  {
-    id: "koncept",
-    name: "Koncept",
-    color: "from-orange-500 to-amber-600",
-    lightColor: "from-orange-50 to-amber-50",
-  },
+
   {
     id: "khanAcademy",
-    name: "Khan Academy",
+    name: "Others",
     color: "from-rose-500 to-pink-600",
     lightColor: "from-rose-50 to-pink-50",
   },
