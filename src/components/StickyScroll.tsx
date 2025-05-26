@@ -14,8 +14,8 @@ const sections = [
     gradient: "bg-linear-to-r from-cyan-100 via-blue-300 to-indigo-400",
     tagColor: "bg-[#000000FF]/10 text-[#000000FF]",
     images: [
-      { src: "/test.svg", width: 500, height: 500, className: "absolute top-0 left-0 z-20" },
-      { src: "/test2.svg", width: 500, height: 500, className: "absolute top-10 left-44 z-10" },
+      { src: "/home12.png", width: 500, height: 500, className: "absolute top-0 left-0 z-20" },
+      { src: "/home2.jpg", width: 500, height: 500, className: "absolute top-10 left-44 z-10" },
     ],
   },
   {
@@ -26,8 +26,8 @@ const sections = [
     gradient: "bg-linear-to-r from-lime-200 via-green-400 to-emerald-600",
     tagColor: "bg-[#000000FF]/10 text-[#000000FF]",
     images: [
-      { src: "/test.svg", width: 500, height: 500, className: "absolute top-0 left-0 z-20" },
-      { src: "/test2.svg", width: 500, height: 500, className: "absolute top-10 left-44 z-10" },
+     { src: "/home1.jpg", width: 500, height: 500, className: "absolute top-0 left-0 z-20" },
+      { src: "/home22.png", width: 500, height: 500, className: "absolute top-10 left-44 z-10" },
     ],
   },
   {
@@ -38,8 +38,8 @@ const sections = [
     gradient: "bg-linear-to-r from-red-200 via-pink-400 to-rose-600",
     tagColor: "bg-[#000000FF]/10 text-[#000000FF]",
     images: [
-      { src: "/test.svg", width: 500, height: 500, className: "absolute top-0 left-0 z-20" },
-      { src: "/test2.svg", width: 500, height: 500, className: "absolute top-10 left-44 z-10" },
+      { src: "/home3.jpg", width: 500, height: 500, className: "absolute top-0 left-0 z-20" },
+      { src: "/home32.png", width: 500, height: 500, className: "absolute top-10 left-44 z-10" },
     ],
   },
 ];

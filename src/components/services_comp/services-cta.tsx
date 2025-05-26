@@ -71,7 +71,7 @@ export default function ServicesCTA() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
-                <div className="text-3xl font-bold">50k+</div>
+                <div className="text-3xl font-bold">1000+</div>
                 <div className="text-sm">Students</div>
               </motion.div>
 
@@ -82,7 +82,7 @@ export default function ServicesCTA() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
-                <div className="text-3xl font-bold">500+</div>
+                <div className="text-3xl font-bold">10+</div>
                 <div className="text-sm">Schools</div>
               </motion.div>
 
@@ -93,7 +93,7 @@ export default function ServicesCTA() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
-                <div className="text-3xl font-bold">98%</div>
+                <div className="text-3xl font-bold">95%</div>
                 <div className="text-sm">Satisfaction</div>
               </motion.div>
 

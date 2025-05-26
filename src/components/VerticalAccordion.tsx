@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
 import { ArrowRight, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -127,6 +126,12 @@ const VerticalAccordionWithPopup = () => {
 
   return (
     <>
+      <style jsx>{`
+        .vertical-text {
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+        }
+      `}</style>
       <h1 className="pt-8 sm:pt-12 lg:pt-32 pb-8 sm:pb-12 text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
         The GradeNext Programme
       </h1>
@@ -135,10 +140,10 @@ const VerticalAccordionWithPopup = () => {
           <div
             key={item.id}
             className={`group flex flex-col items-center justify-center
-            ${
+           ${
               activeItem === item.id
-                ? "h-[400px] sm:h-[450px] lg:h-[600px] lg:w-[800px]"
-                : "h-20 sm:h-24 lg:h-[600px] lg:w-24"
+                ? "h-[500px] sm:h-[550px] lg:h-[600px] lg:w-[800px]"
+                : "h-20 sm:h-24 lg:h-[600px] lg:w-32"
             } 
             w-full rounded-xl sm:rounded-2xl lg:rounded-3xl duration-500 transition-all relative overflow-hidden ${item.color}
             hover:shadow-xl cursor-pointer`}
@@ -163,15 +168,16 @@ const VerticalAccordionWithPopup = () => {
             {/* Content Container */}
             <div className="relative w-full h-full flex flex-col">
               {/* Title */}
-             <h1
+              <h1
                 className={`
-                absolute transition-all duration-500 font-bold tracking-wider ${item.textColor}
-                ${
-                  activeItem === item.id
-                    ? "lg:left-10 lg:top-10 lg:text-4xl text-2xl left-6 top-6"
-                    : "lg:-rotate-90 lg:-left-8 lg:top-1/2 lg:-translate-y-1/2 lg:text-2xl text-xl left-6 top-1/2 -translate-y-1/2"
-                }
-              `}
+                  absolute transition-all duration-500  font-bold tracking-wider ${item.textColor}
+                  ${
+                    activeItem === item.id
+                      ? "lg:left-10 lg:top-10 lg:text-4xl text-2xl left-6 top-6"
+                      : "lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-xl text-xl left-6 top-1/2 -translate-y-1/2"
+                  }
+                  ${activeItem !== item.id ? "lg:vertical-text" : ""}
+                `}
               >
                 {item.title}
               </h1>
@@ -179,7 +185,7 @@ const VerticalAccordionWithPopup = () => {
               {/* Content - Only visible when active */}
               <div
                 className={`
-                transition-all duration-500 delay-200 absolute 
+                transition-all duration-500 pt-6 delay-200 absolute 
                 ${activeItem === item.id ? "opacity-100" : "opacity-0"}
                 left-4 sm:left-6 lg:left-10 right-4 sm:right-6 lg:right-10 top-16 sm:top-20 lg:top-32
               `}
@@ -272,7 +278,9 @@ const VerticalAccordionWithPopup = () => {
                               <p className="text-base sm:text-lg lg:text-xl text-gray-600">{item.content.subtitle}</p>
                             </div>
 
-                            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">{item.content.description}</p>
+                            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                              {item.content.description}
+                            </p>
 
                             {/* Stats */}
                             <div className="grid grid-cols-3 gap-4 sm:gap-8">

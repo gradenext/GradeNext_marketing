@@ -8,7 +8,7 @@ import { FiInstagram, FiLinkedin, FiTwitter, FiYoutube } from "react-icons/fi"
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Price Plan", href: "/pricing" },
+  // { name: "Price Plan", href: "/pricing" },
   { name: "How It Works", href: "/how-it-works" },
   // { name: "Careers", href: "/careers" },
   { name: "About", href: "/about" },
@@ -108,7 +108,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-gray-200 py-6">
-        <p className="text-center text-sm text-gray-600">Copyright@2023 All Right Reserved Pagedone.</p>
+        <p className="text-center text-sm text-gray-600">Copyright@2025 All Right Reserved GradeNext.</p>
       </div>
     </footer>
   )

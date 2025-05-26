@@ -69,7 +69,7 @@ export default function MainNavbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-3" : "bg-white/80 backdrop-blur-sm py-5"
+        isScrolled ? "bg-white shadow-md py-3" : "bg-white/80 backdrop-blur-sm py-3"
       }`}
     >
          {isTutorOpen && (
@@ -177,7 +177,7 @@ export default function MainNavbar() {
               variant="outline"
               className="rounded-full border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
             >
-              Login
+              Student Login
             </Button>
             <Button
                onClick={handleTutorOpen}
@@ -226,7 +226,7 @@ export default function MainNavbar() {
               variant="outline"
               className="rounded-lg border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
             >
-              Login
+             Student Login
             </Button>
             <Button
                onClick={handleTutorOpen}

@@ -14,7 +14,7 @@ export default function ProcessSteps() {
       icon: <Users className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+        "/h1.png",
       features: [
         "Needs assessment survey",
         "Platform customization",
@@ -29,8 +29,8 @@ export default function ProcessSteps() {
         "We integrate your existing curriculum and educational content into our platform, ensuring alignment with your learning objectives and standards. Custom content can also be created to fill any gaps.",
       icon: <BookOpen className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+     image:
+        "/h2.png",
       features: ["Curriculum mapping", "Content digitization", "Custom material creation", "Learning path design"],
     },
     {
@@ -40,8 +40,8 @@ export default function ProcessSteps() {
         "Students and teachers begin using the platform, with our AI technology adapting to each learner's pace and style. Real-time feedback helps optimize the learning experience.",
       icon: <Zap className="w-8 h-8" />,
       color: "from-amber-500 to-orange-500",
-      image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+   image:
+        "/h3.png",
       features: [
         "Personalized learning paths",
         "Adaptive difficulty adjustment",
@@ -56,8 +56,8 @@ export default function ProcessSteps() {
         "Our analytics dashboard provides comprehensive insights into student performance and engagement. We continuously optimize the platform based on this data to improve learning outcomes.",
       icon: <BarChart className="w-8 h-8" />,
       color: "from-emerald-500 to-teal-500",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+ image:
+        "/h5.png",
       features: [
         "Performance analytics",
         "Progress reporting",
@@ -101,7 +101,7 @@ export default function ProcessSteps() {
               <div className={`order-2 ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
                 <div className="relative">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                    {/* <Image src={step.image || "/placeholder.svg"} alt={step.title} fill className="object-cover" /> */}
+                    <Image src={step.image || "/placeholder.svg"} alt={step.title} fill className="object-cover" />
                     <div
                       className={`absolute inset-0 bg-gradient-to-tr ${step.color} opacity-30 mix-blend-overlay`}
                     ></div>

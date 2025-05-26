@@ -11,7 +11,7 @@ const courses = [
   {
     id: 1,
     title:"An Unforgettable Learning Journey!", 
-    occ: "STUDENT",
+    occ: "PARENT",
     color: "from-blue-400 to-cyan-300",
     image:
       "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -27,7 +27,7 @@ const courses = [
   {
     id: 2,
     title: "Boosted My Confidence!",
-    occ: "STUDENT",
+    occ: "PARENT",
     color: "from-teal-400 to-emerald-300",
     image:
       "https://images.unsplash.com/photo-1455729552865-3658a5d39692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -43,7 +43,7 @@ const courses = [
   {
     id: 3,
     title: "Learning Made Fun and Easy!",
-    occ: "STUDENT",
+    occ: "PARENT",
 
     color: "from-amber-400 to-yellow-300",
     image:
