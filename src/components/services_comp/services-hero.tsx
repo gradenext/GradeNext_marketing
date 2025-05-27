@@ -148,14 +148,20 @@ export default function ServicesHero() {
             <span className="absolute inset-0 bg-gradient-to-r from-white to-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Button>
 
-          <Button
+           <Button
             size="lg"
             variant="outline"
-            onClick={() => router.push("https://youtube.com")}
+            asChild
             className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
-          >
-            Watch Demo
-          </Button>
+            >
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch Demo
+            </a>
+            </Button>
         </motion.div>
       </div>
 

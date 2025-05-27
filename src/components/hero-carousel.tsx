@@ -154,7 +154,7 @@ export default function HeroCarousel() {
               className={`absolute top-10 right-10 w-96 h-96 bg-gradient-to-br ${slide.accentGradient} rounded-full opacity-20 blur-3xl animate-pulse`}
             ></div>
 
-            <div className="container max-w-7xl mx-auto h-full px-6 flex items-center relative z-10">
+            <div className="container max-w-7xl mx-auto md:px-24 px-6 h-full flex items-center relative z-10">
               <div
                 className={`max-w-4xl transition-all duration-1000 ${
                   currentSlide === index ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"

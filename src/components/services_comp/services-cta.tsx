@@ -52,12 +52,18 @@ export default function ServicesCTA() {
               </span>
             </Button>
             <Button
-              size="lg"
-              variant="outline"
-              onClick={() => router.push("https://youtube.com")}
-              className="rounded-full border-2 text-black border-white/70  hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
+            size="lg"
+            variant="outline"
+            asChild
+            className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
+            >
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Watch Demo
+            </a>
             </Button>
           </motion.div>
 
