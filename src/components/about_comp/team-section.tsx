@@ -7,30 +7,30 @@ import { Github, Linkedin, Twitter } from "lucide-react"
 export default function TeamSection() {
   const team = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Co-Founder",
-      bio: "Former educator with 15+ years of experience, passionate about making education accessible to all.",
+      name: "Mohammad shahid, PhD",
+      role: "Founder & CEO",
+      bio: "Dedicated Scientist, more than 15 years experience in education field.",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
-      name: "Michael Chen",
-      role: "CTO & Co-Founder",
-      bio: "AI specialist with a background in cognitive science and educational technology.",
+      name: "Rumee Siddiqui, MBA",
+      role: "Global Head",
+      bio: "Business Entrepreneur, more than 10 years of experience of child education.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
-      name: "Aisha Patel",
-      role: "Chief Learning Officer",
-      bio: "PhD in Educational Psychology, focused on creating effective learning methodologies.",
+      name: "Mohammad Rashid, MCA",
+      role: "Asia and Japan Head",
+      bio: "Dedicated Software Engineer, more than 20 years of experience in child education.",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
-      name: "David Rodriguez",
-      role: "Head of Product",
-      bio: "Former UX designer with a passion for creating intuitive educational interfaces.",
+      name: "Kuldeep Kushwah, B.Tech",
+      role: "Global Technical Head",
+      bio: "Professional IT expert, more than 10 years of IT business experience.",
       image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },

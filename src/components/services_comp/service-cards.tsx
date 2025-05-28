@@ -111,7 +111,7 @@ export default function ServiceCards() {
   const DotPattern = ({ color }: { color: string }) => (
     <div className="absolute inset-0 overflow-hidden">
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 `bg-gradient-to-br ${color}`"
         style={{
           backgroundImage: `radial-gradient(circle at 20% 20%, currentColor 2px, transparent 2px),
                          radial-gradient(circle at 80% 40%, currentColor 1px, transparent 1px),
@@ -119,7 +119,7 @@ export default function ServiceCards() {
           backgroundSize: "60px 60px, 40px 40px, 80px 80px",
           opacity: 0.1,
         }}
-        className={`bg-gradient-to-br ${color}`}
+      
       ></div>
       <div
         className={`absolute top-16 right-16 w-8 h-8 bg-gradient-to-br ${color} rounded-full opacity-20 animate-bounce`}
@@ -286,7 +286,7 @@ export default function ServiceCards() {
                           </ul>
                         </div>
 
-                        <motion.button
+                        {/* <motion.button
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.5, delay: 0.8 }}
@@ -301,7 +301,7 @@ export default function ServiceCards() {
                           >
                             →
                           </motion.div>
-                        </motion.button>
+                        </motion.button> */}
                       </motion.div>
                     </div>
                   </motion.div>

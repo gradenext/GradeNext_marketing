@@ -8,61 +8,59 @@ export default function ProcessSteps() {
   const steps = [
     {
       number: "01",
-      title: "Assessment & Onboarding",
+      title: "Register & Log In",
       description:
-        "We begin by understanding your educational needs through a comprehensive assessment. Our team then sets up your customized platform and provides training for administrators, teachers, and students.",
+        "Start by choosing your grade, subjects, and subscription plan. Once registered, log in using your ID and password to access your personalized dashboard.",
       icon: <Users className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       image:
         "/h1.png",
       features: [
-        "Needs assessment survey",
-        "Platform customization",
-        "User account setup",
-        "Initial training sessions",
+        "Choose grade and subjects",
+        "Select a plan that fits your needs",
+        "Register and log in to your account",
+       
       ],
     },
     {
       number: "02",
-      title: "Content Integration",
+      title: "Choose Subject & Learning Mode",
       description:
-        "We integrate your existing curriculum and educational content into our platform, ensuring alignment with your learning objectives and standards. Custom content can also be created to fill any gaps.",
+        "Pick a subject and your preferred mode—Practice, Revision, or Topic-wise—and dive into an engaging learning experience designed just for you.",
       icon: <BookOpen className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
      image:
         "/h2.png",
-      features: ["Curriculum mapping", "Content digitization", "Custom material creation", "Learning path design"],
+      features: ["Subject selection", "Choose learning mode", "Start your learning adventure"],
     },
     {
       number: "03",
-      title: "Implementation & Adaptation",
+      title: "Practice with Personalized Questions",
       description:
-        "Students and teachers begin using the platform, with our AI technology adapting to each learner's pace and style. Real-time feedback helps optimize the learning experience.",
+        "Tackle questions based on your curriculum or explore topics of your choice. Enjoy real-time analytics to guide and enhance your learning.",
       icon: <Zap className="w-8 h-8" />,
       color: "from-amber-500 to-orange-500",
    image:
         "/h3.png",
       features: [
-        "Personalized learning paths",
-        "Adaptive difficulty adjustment",
-        "Real-time feedback",
-        "Engagement monitoring",
+        "Curriculum-aligned practice",
+        "Optional personalized topics",
+        "Real-time performance tracking",
       ],
     },
     {
       number: "04",
-      title: "Analysis & Optimization",
+      title: "Track Progress with Advanced Reports",
       description:
-        "Our analytics dashboard provides comprehensive insights into student performance and engagement. We continuously optimize the platform based on this data to improve learning outcomes.",
+        "View detailed performance insights in your profile. Use advanced analytics to monitor progress, identify gaps, and celebrate your achievements.",
       icon: <BarChart className="w-8 h-8" />,
       color: "from-emerald-500 to-teal-500",
  image:
         "/h5.png",
       features: [
-        "Performance analytics",
-        "Progress reporting",
-        "Learning gap identification",
-        "Continuous improvement",
+        "Performance dashboard",
+        "Progress tracking",
+        "Learning insights & improvement tips",
       ],
     },
   ]

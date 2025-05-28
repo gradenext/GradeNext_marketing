@@ -38,7 +38,7 @@ const slides = [
     heading: "Building Students Future with Computational Thinking",
     subheading: "Empowering Education with Innovation",
     paragraph:
-      "In collaboration with McGill University experts, Grade Next incorporates cutting-edge educational research to create an engaging and effective learning experience.",
+      "Grade Next uses programming to nurture computational thinking, helping students build problem-solving skills and thrive in a tech-driven world.",
     buttonLink: "/harvard-partnership",
     decorativeElements: "dots",
   },
@@ -52,7 +52,7 @@ export default function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 8000)
+    }, 15000) // Change slide every 15 seconds
 
     return () => clearInterval(interval)
   }, [])

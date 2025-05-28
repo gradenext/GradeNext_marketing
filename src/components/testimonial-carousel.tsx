@@ -10,104 +10,90 @@ import { useState, useCallback, useEffect } from "react"
 const courses = [
   {
     id: 1,
-    title:"An Unforgettable Learning Journey!", 
+    title: "Transformed My Child’s Learning Experience!",
     occ: "PARENT",
     color: "from-blue-400 to-cyan-300",
-    image:
-      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f",
     instructor: {
-      name:  "Emma Johnson",
-      avatar:
-        "https://images.unsplash.com/photo-1599054802207-91d346adc120?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      location: "New York, USA",
+      name: "Karen Miller",
+      avatar: "https://images.unsplash.com/photo-1599054802207-91d346adc120",
+      location: "California, USA",
     },
     icon: Waves,
-    description:"This platform helped me stay on track with my studies. The structured lessons and interactive exercises made learning so much more enjoyable!"
+    description: "GradeNext made learning structured and fun for my son. The real-time feedback and interactive lessons have completely changed how he studies!"
   },
   {
     id: 2,
-    title: "Boosted My Confidence!",
+    title: "Just What We Needed!",
     occ: "PARENT",
     color: "from-teal-400 to-emerald-300",
-    image:
-      "https://images.unsplash.com/photo-1455729552865-3658a5d39692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1455729552865-3658a5d39692",
     instructor: {
-      name: "Liam Carter",
-      avatar:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      location: "London, UK",
+      name: "David Thompson",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      location: "Texas, USA",
     },
     icon: Sun,
-    description:"I used to struggle with tough subjects, but the revision-based practice and weekly tests really helped me improve. Now, I feel ready for any challenge!"
+    description: "My daughter used to struggle with math. With GradeNext’s adaptive learning path, she’s not only caught up but is now ahead of her class!"
   },
   {
     id: 3,
-    title: "Learning Made Fun and Easy!",
+    title: "A Great Companion for Self-Learning!",
     occ: "PARENT",
-
-    color: "from-amber-400 to-yellow-300",
-    image:
-      "https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    color: "from-purple-400 to-indigo-300",
+    image: "https://images.unsplash.com/photo-1505459668311-8dfac7952bf0",
     instructor: {
-      name: "Sophia Martinez",
-      avatar:
-        "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      location: "Sydney, Australia",
+      name: "Satoshi Tanaka",
+      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+      location: "Tokyo, Japan",
     },
-    icon: Compass,
-    description:"The step-by-step guidance and engaging activities kept me motivated. I love how I can track my progress and keep improving every day!"
+    icon: Wind,
+    description: "My son enjoys exploring topics on his own now. GradeNext makes learning engaging and builds confidence step by step."
   },
   {
     id: 4,
-    title: "A Game-Changer for My Child!",
+    title: "Perfect Blend of Practice and Fun!",
     occ: "PARENT",
-
-    color: "from-purple-400 to-indigo-300",
-    image:
-      "https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    color: "from-pink-400 to-rose-300",
+    image: "https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1",
     instructor: {
-      name: "Olivia Brown",
-      avatar:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      location: "Toronto, Canada",
+      name: "Yuki Nakamura",
+      avatar: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c",
+      location: "Osaka, Japan",
     },
-    icon: Wind,
-    description:"My son struggled with certain subjects, but the personalized practice sessions and tutor support made a huge difference. Now, he's more confident and engaged!"
+    icon: Sun,
+    description: "GradeNext brings learning to life! My daughter now looks forward to study time and loves the fun challenges in every subject."
   },
   {
     id: 5,
-    title: "Finally, a Platform That Works!",
+    title: "Impressive Progress in a Few Weeks!",
     occ: "PARENT",
-    color: "from-pink-400 to-rose-300",
-    image:
-      "https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    color: "from-amber-400 to-yellow-300",
+    image: "https://images.unsplash.com/photo-1509914398892-963f53e6e2f1",
     instructor: {
-      name: "James Lee",
-      avatar:
-        "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=2034&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      location: "San Francisco, USA",
+      name: "Laura Bennett",
+      avatar: "https://images.unsplash.com/photo-1566492031773-4f4e44671857",
+      location: "Toronto, Canada",
     },
-    icon: Sun,
-    description:"As a parent, I wanted a learning solution that actually helps my child progress. The adaptive learning and structured revisions are exactly what we needed!"
+    icon: Compass,
+    description: "GradeNext gave my child the right push with customized lessons. I’m thrilled to see how quickly she’s improving."
   },
   {
     id: 6,
-    title: "Improved Results & Independent Learning!",
+    title: "A Modern Solution for Today’s Learners",
     occ: "PARENT",
-
     color: "from-orange-400 to-red-300",
-    image:
-      "https://images.unsplash.com/photo-1513737567531-bc431c8e5e73?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1513737567531-bc431c8e5e73",
     instructor: {
-      name: "Ethan Wilson",
-      avatar:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      location: "Dubai, UAE",
+      name: "Anita Mehra",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      location: "Mumbai, India",
     },
     icon: Compass,
-    description:"I've seen a major improvement in my daughter's grades since using this platform. She's more disciplined and enjoys learning like never before!"
-  },
-]
+    description: "As a parent, I wanted a platform that supports independent learning. GradeNext exceeded my expectations—it’s intuitive and very effective!"
+  }
+];
+
 
 export default function SurfCarousel() {
   // Fix the emblaApi initialization and button functionality
@@ -215,10 +201,10 @@ export default function SurfCarousel() {
         <div className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-              Discover Surf Courses
+              Discover Personalized Learning Paths
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              From beginners to advanced surfers, find the perfect course to ride the waves with confidence and style.
+              Whether your child is just starting out or looking to advance, explore tailored courses that build skills, boost confidence, and make learning truly engaging.
             </p>
           </motion.div>
         </div>

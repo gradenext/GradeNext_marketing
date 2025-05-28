@@ -179,12 +179,13 @@ export default function MainNavbar() {
             >
               Student Login
             </Button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZP4ocvXbO1RjyySPfQB5_46oHnOLgZhVkx7wFq6r6n7qtQ/viewform" target="_blank">
             <Button
-               onClick={handleTutorOpen}
               className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
             >
               Become a Tutor
             </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

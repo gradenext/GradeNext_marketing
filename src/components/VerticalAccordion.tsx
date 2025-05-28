@@ -24,7 +24,7 @@ const items = [
       "Continuous progress tracking and improvement",
     ],
     content: {
-      subtitle: "Personalized 1:1 Tutor Support",
+      subtitle: "AI-Powered Adaptive Learning & Real-Time Performance Tracking",
       description:
         "Effective learning requires consistent reinforcement, and Grade Next’s AI-powered smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional AI-driven practice sessions are introduced to solidify understanding before moving forward.",
       stats: [
@@ -36,7 +36,7 @@ const items = [
   },
   {
     id: 1,
-    title: "Future-Ready Skills",
+    title: "Personalized 1:1 Tutor Support",
     color: "bg-blue-500",
     hoverColor: "group-hover:bg-blue-600",
     textColor: "text-blue-50",

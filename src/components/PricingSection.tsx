@@ -38,14 +38,14 @@ const pricingPlans = [
     period: "/mo",
     description: "Best for dedicated learners seeking structured progress.",
     features: [
-      { name: "Full course access", included: true },
+      { name: "Access to all Basic features", included: true },
       { name: "1:1 tutor support on additional nominal cost", included: true },
       { name: "Topic wise unlimited practice & revision exercises", included: true },
-      { name: "Unlimited practice & revision exercises", included: true },
-      { name: "Weekly and advanced tests", included: true },
+      // { name: "Unlimited practice & revision exercises", included: true },
+      { name: "Weekly test to track performance", included: true },
       { name: "Personalized learning insights", included: true },
-      { name: "Priority email support", included: true },
-      { name: "Performance analytics & goal tracking", included: true },
+      // { name: "Priority email support", included: true },
+      // { name: "Performance analytics & goal tracking", included: true },
     ],
     buttonText: "Start 14-Day Free Trial",
     gradient: "from-violet-500 to-purple-600",
@@ -60,13 +60,13 @@ const pricingPlans = [
     period: " us",
     description: "Best for advance learner for competitive exams",
     features: [
-      { name: "Unlimited course access", included: true },
+      { name: "All Pro features access", included: true },
       { name: "Custom design advancing learning program", included: true },
       { name: "Dedicated personalized 1:1 tutor support", included: true },
       { name: "Advanced analytics, goal tracking & reports", included: true },
-      { name: "Custom learning paths", included: true },
-      { name: "Dedicated tutor support", included: true },
-      { name: "Advanced analytics & reports", included: true },
+      // { name: "Custom learning paths", included: true },
+      // { name: "Dedicated tutor support", included: true },
+      // { name: "Advanced analytics & reports", included: true },
       { name: "1-on-1 student mentoring", included: true },
       { name: "Priority support & onboarding", included: true },
     ],
@@ -186,7 +186,7 @@ export default function PricingSection() {
                       </div>
                     ))}
                   </div>
-<Link href="https://app.gradenext.com/">
+                  <Link href="https://app.gradenext.com/">
                   <AnimatedButton
                     className={`w-full transition-all relative overflow-hidden
                       ${
