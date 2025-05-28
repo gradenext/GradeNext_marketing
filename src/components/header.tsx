@@ -26,7 +26,7 @@ const socialLinks = [
  
   {
     name: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@GradeNext",
     icon: Youtube,
     color: "hover:text-red-600",
   }

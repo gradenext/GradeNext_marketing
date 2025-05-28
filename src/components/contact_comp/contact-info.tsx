@@ -15,14 +15,14 @@ export default function ContactInfo() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      details: ["+12404418984"],
+      details: ["+1 2404418984"],
       color: "bg-blue-100",
       iconColor: "text-blue-600",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      details: ["support@GradeNext.com"],
+      details: ["supportgradenext@gmail.com"],
       color: "bg-pink-100",
       iconColor: "text-pink-600",
     },

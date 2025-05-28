@@ -58,7 +58,7 @@ export default function ServicesCTA() {
             className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
             >
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/watch?v=b5_q0d_dVrQ"
               target="_blank"
               rel="noopener noreferrer"
             >
