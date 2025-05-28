@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Sparkles, Zap, BookOpen } from "lucide-react"
-import Link from "next/link"
 
 // Carousel slide data with unique designs
 const slides = [
@@ -138,7 +137,7 @@ export default function HeroCarousel() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {slides.map((slide, index) => {
-        const IconComponent = slide.icon
+        
         return (
           <div
             key={slide.id}

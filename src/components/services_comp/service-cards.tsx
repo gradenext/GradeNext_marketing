@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { CheckCircle, Brain, Users, BarChart3, Sparkles, Zap, Target } from "lucide-react"
+import { CheckCircle, Brain, Users, BarChart3, Sparkles, Target } from "lucide-react"
 
 export default function ServiceCards() {
   const services = [

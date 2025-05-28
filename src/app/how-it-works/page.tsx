@@ -1,7 +1,6 @@
 import Footer from "@/components/footer"
 import BenefitsSection from "@/components/how-it-works_comp/benefits-section"
 import DemoVideo from "@/components/how-it-works_comp/demo-video"
-import FaqSection from "@/components/how-it-works_comp/faq-section"
 import HowItWorksCTA from "@/components/how-it-works_comp/how-it-works-cta"
 import HowItWorksHero from "@/components/how-it-works_comp/how-it-works-hero"
 import ProcessSteps from "@/components/how-it-works_comp/process-steps"

@@ -12,7 +12,6 @@ import {
   Settings, 
   CheckCircle
 } from "lucide-react"
-import Image from "next/image"
 
 export default function PlatformFeatures() {
   const [activeFeature, setActiveFeature] = useState<keyof typeof features>("adaptive-learning")

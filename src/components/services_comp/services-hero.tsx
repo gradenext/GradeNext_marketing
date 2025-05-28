@@ -3,10 +3,8 @@
 import { motion } from "framer-motion"
 // import { Sparkles, Zap, BookOpen, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation";
 
 export default function ServicesHero() {
-  const router = useRouter()
   function smoothScrollToFeatures() {
     const missionDiv = document.getElementById('features');
     if (missionDiv) {

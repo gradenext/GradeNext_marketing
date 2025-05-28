@@ -173,7 +173,7 @@ const VerticalAccordionWithPopup = () => {
                   absolute transition-all duration-500 lg:-rotate-90 whitespace-nowrap  font-bold tracking-wider ${item.textColor}
                   ${
                     activeItem === item.id
-                      ? "lg:left-10 lg:-rotate-0 whitespace-nowrap lg:top-10 lg:text-4xl text-2xl left-6 top-6"
+                      ? "lg:left-10 lg:rotate-0 whitespace-nowrap lg:top-10 lg:text-4xl text-2xl left-6 top-6"
                       : "lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-xl text-xl left-6 top-1/2 -translate-y-1/2"
                   }
                   ${activeItem !== item.id ? "lg:vertical-text" : ""}

@@ -3,7 +3,6 @@
 import useEmblaCarousel from "embla-carousel-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Waves, Sun, Compass, Wind } from "lucide-react"
-import Image from "next/image"
 import { useState, useCallback, useEffect } from "react"
 
 // Updated course data with more variety and colors
