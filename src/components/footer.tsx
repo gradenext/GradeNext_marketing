@@ -51,7 +51,8 @@ export default function Footer() {
                 <FiLinkedin className="w-5 h-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.youtube.com/@GradeNext"
+                target="_blank"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-white transition-colors"
               >
                 <FiYoutube className="w-5 h-5" />
@@ -63,8 +64,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Get In Touch</h3>
             <div className="space-y-4">
-              <p className="text-gray-600">support@GradeNext.com</p>
-              <p className="text-gray-600">+12404418984 </p>
+              <p className="text-gray-600">supportgradenext@gmail.com</p>
+              <p className="text-gray-600">+1 2404418984 </p>
               <p className="text-gray-600">620 Veterans Blvd, Unit 525, Redwood City, CA, 94063</p>
             </div>
           </div>

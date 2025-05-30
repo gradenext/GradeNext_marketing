@@ -53,21 +53,21 @@ export default function DemoVideo() {
                 <div className="absolute inset-0 z-40 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 z-40 left-8 right-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Platform Overview: Transforming Education</h3>
-                  <p className="text-white/80">3:45 min</p>
+                  <p className="text-white/80">2:45 min</p>
                 </div>
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage:
-                      "url('https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80')",
-                    backgroundSize: "cover",
-                  }}
+                  // style={{
+                  //   backgroundImage:
+                  //     "url('https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80')",
+                  //   backgroundSize: "cover",
+                  // }}
                 />
               </>
             ) : (
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                src="https://www.youtube.com/embed/b5_q0d_dVrQ?si=FBruFQWHgIhHbFs0"
                 title="Platform Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

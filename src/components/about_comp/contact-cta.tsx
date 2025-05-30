@@ -41,7 +41,7 @@ export default function ContactCTA() {
           >
             <Button
               size="lg"
-              onClick={() => window.open("https://youtube.com/")}
+              onClick={() => window.open("https://www.youtube.com/watch?v=b5_q0d_dVrQ", "_blank")}
               className="relative overflow-hidden rounded-full bg-white text-emerald-600 px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:bg-gray-100"
             >
               Watch Demo

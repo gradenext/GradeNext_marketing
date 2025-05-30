@@ -197,7 +197,7 @@ export default function FeaturesSection() {
                   <TrendingUp className="w-4 h-4 text-white" />
                 </div>
                 <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  98%
+                  95%
                 </div>
               </div>
               <div className="text-sm text-gray-600 font-medium">Satisfaction Rate</div>
@@ -230,7 +230,7 @@ export default function FeaturesSection() {
               className="absolute top-1/2 -left-16 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/20"
             >
               <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-rose-600 bg-clip-text text-transparent">
-                50K+
+                1000+
               </div>
               <div className="text-xs text-gray-600 font-medium">Active Students</div>
             </motion.div>
