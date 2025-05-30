@@ -1,7 +1,6 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,8 +13,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import emailjs from "emailjs-com";
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -25,32 +26,25 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setError(null);
 
-    const form = e.currentTarget;
-    const formData = {
-      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
-      lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-      inquiry: (form.elements.namedItem("inquiry") as HTMLSelectElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-    };
+    if (!formRef.current) return;
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const result = await emailjs.sendForm(
+        "service_xobfjwb",
+        "template_h9emr4m",
+        formRef.current,
+        "Ft8uNCuazhkwgKyLE"
+      );
 
-      const result = await response.json();
-
-      if (result.success) {
+      if (result.status === 200) {
         setIsSubmitted(true);
       } else {
-        throw new Error(result.message || "Failed to send message");
+        throw new Error("Failed to send message. Please try again.");
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "An unexpected error occurred");
+      setError(
+        err instanceof Error ? err.message : "An unexpected error occurred"
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -60,6 +54,7 @@ export default function ContactForm() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -70,8 +65,7 @@ export default function ContactForm() {
               Send Us a Message
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Fill out the form below and our team will get back to you within 24 hours. We&apos;re excited to hear from you
-              and learn how we can help transform your educational experience.
+              Fill out the form below and our team will get back to you within 24 hours.
             </p>
 
             <div className="bg-gradient-to-br from-purple-100 to-indigo-100 p-6 rounded-xl mb-8">
@@ -100,6 +94,7 @@ export default function ContactForm() {
             </div>
           </motion.div>
 
+          {/* Right Form Section */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -117,17 +112,14 @@ export default function ContactForm() {
                   <CheckCircle2 className="w-10 h-10 text-green-600" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
-                <p className="text-gray-600 mb-8">Thank you for reaching out. Our team will get back to you shortly.</p>
+                <p className="text-gray-600 mb-8">
+                  Thank you for reaching out. Our team will get back to you shortly.
+                </p>
                 <Button
                   onClick={() => {
                     setIsSubmitted(false);
                     setError(null);
-                    (document.getElementById("firstName") as HTMLInputElement).value = "";
-                    (document.getElementById("lastName") as HTMLInputElement).value = "";
-                    (document.getElementById("email") as HTMLInputElement).value = "";
-                    (document.getElementById("phone") as HTMLInputElement).value = "";
-                    (document.getElementById("inquiry") as HTMLSelectElement).value = "";
-                    (document.getElementById("message") as HTMLTextAreaElement).value = "";
+                    formRef.current?.reset();
                   }}
                   className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
                 >
@@ -135,35 +127,23 @@ export default function ContactForm() {
                 </Button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 {error && (
                   <div className="text-red-500 text-sm text-center">{error}</div>
                 )}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="text-sm font-medium">
                       First Name
                     </label>
-                    <Input
-                      id="firstName"
-                      name="firstName"
-                      placeholder="John"
-                      required
-                      className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
-                    />
+                    <Input id="firstName" name="firstName" required placeholder="John" />
                   </div>
-
                   <div className="space-y-2">
                     <label htmlFor="lastName" className="text-sm font-medium">
                       Last Name
                     </label>
-                    <Input
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Doe"
-                      required
-                      className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
-                    />
+                    <Input id="lastName" name="lastName" required placeholder="Doe" />
                   </div>
                 </div>
 
@@ -171,35 +151,22 @@ export default function ContactForm() {
                   <label htmlFor="email" className="text-sm font-medium">
                     Email Address
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="john.doe@example.com"
-                    required
-                    className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
-                  />
+                  <Input type="email" id="email" name="email" required placeholder="john@example.com" />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="phone" className="text-sm font-medium">
                     Phone Number (Optional)
                   </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+1 (555) 123-4567"
-                    className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
-                  />
+                  <Input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="inquiry" className="text-sm font-medium">
                     Inquiry Type
                   </label>
-                  <Select name="inquiry" defaultValue="">
-                    <SelectTrigger className="border-gray-300 focus:border-purple-500 focus:ring-purple-500">
+                  <Select name="inquiry">
+                    <SelectTrigger>
                       <SelectValue placeholder="Select an inquiry type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -216,21 +183,10 @@ export default function ContactForm() {
                   <label htmlFor="message" className="text-sm font-medium">
                     Message
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us how we can help you..."
-                    rows={5}
-                    required
-                    className="border-gray-300 focus:border-purple-500 focus:ring-purple-500"
-                  />
+                  <Textarea id="message" name="message" rows={5} required placeholder="Tell us how we can help you..." />
                 </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-6 rounded-xl"
-                >
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-6 rounded-xl">
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
