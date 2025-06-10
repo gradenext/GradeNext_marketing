@@ -75,7 +75,7 @@ export default function HowItWorksHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
+          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-lg font-medium"
         >
           Our Platform Explained
         </motion.div>

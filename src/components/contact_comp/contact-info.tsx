@@ -39,10 +39,10 @@ export default function ContactInfo() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
             Connect With Us
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             We&apos;re here to help! Reach out to us through any of these channels and we&apos;ll respond as quickly as possible.
           </p>
         </motion.div>
@@ -62,10 +62,10 @@ export default function ContactInfo() {
               >
                 {method.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4">{method.title}</h3>
+              <h3 className="text-2xl font-bold mb-4">{method.title}</h3>
               <ul className="space-y-2">
                 {method.details.map((detail, detailIndex) => (
-                  <li key={detailIndex} className="text-gray-600">
+                  <li key={detailIndex} className="text-gray-600 md:text-lg">
                     {detail}
                   </li>
                 ))}

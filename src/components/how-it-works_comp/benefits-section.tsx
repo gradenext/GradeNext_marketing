@@ -61,10 +61,10 @@ export default function BenefitsSection() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             Benefits for Everyone
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             Our platform delivers unique advantages for students, teachers, and educational institutions.
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ export default function BenefitsSection() {
             >
               <div className={`h-3 ${benefit.color}`}></div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-6">{benefit.title}</h3>
+                <h3 className="text-3xl font-bold mb-6">{benefit.title}</h3>
                 <ul className="space-y-4">
                   {benefit.items.map((item, itemIndex) => (
                     <motion.li
@@ -93,7 +93,7 @@ export default function BenefitsSection() {
                       className="flex items-start gap-3"
                     >
                       <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-700 text-lg">{item}</span>
                     </motion.li>
                   ))}
                 </ul>

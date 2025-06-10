@@ -16,7 +16,7 @@ export default function ServicesCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold mb-6"
           >
             Ready to Transform Your Educational Experience?
           </motion.h2>
@@ -42,7 +42,7 @@ export default function ServicesCTA() {
             <Button
               size="lg"
               onClick={() => router.push("https://app.gradenext.com/")}
-              className="relative overflow-hidden rounded-full bg-white text-indigo-600 px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:bg-gray-100 group"
+              className="relative overflow-hidden rounded-full bg-white text-indigo-600 px-8 py-6 text-xl shadow-lg transition-all duration-300 hover:bg-gray-100 group"
             >
               <span className="relative z-10 flex items-center">
                 Get Started Now
@@ -55,7 +55,7 @@ export default function ServicesCTA() {
             size="lg"
             variant="outline"
             asChild
-            className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-lg"
+            className="rounded-full border-2 border-white/70 text-black hover:text-white hover:bg-white/10 px-8 py-6 text-xl"
             >
             <a
               href="https://www.youtube.com/watch?v=b5_q0d_dVrQ"
@@ -78,7 +78,7 @@ export default function ServicesCTA() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
                 <div className="text-3xl font-bold">1000+</div>
-                <div className="text-sm">Students</div>
+                <div className="text-md">Students</div>
               </motion.div>
 
               <motion.div
@@ -89,7 +89,7 @@ export default function ServicesCTA() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
                 <div className="text-3xl font-bold">10+</div>
-                <div className="text-sm">Schools</div>
+                <div className="text-md">Schools</div>
               </motion.div>
 
               <motion.div
@@ -100,7 +100,7 @@ export default function ServicesCTA() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
                 <div className="text-3xl font-bold">95%</div>
-                <div className="text-sm">Satisfaction</div>
+                <div className="text-md">Satisfaction</div>
               </motion.div>
 
               <motion.div
@@ -111,7 +111,7 @@ export default function ServicesCTA() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
               >
                 <div className="text-3xl font-bold">24/7</div>
-                <div className="text-sm">Support</div>
+                <div className="text-md">Support</div>
               </motion.div>
             </div>
           </div>

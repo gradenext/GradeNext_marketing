@@ -100,7 +100,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
+          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-lg font-medium"
         >
           About GradeNext 
         </motion.div>
@@ -109,7 +109,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
         >
           Transforming{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 to-cyan-300">Education</span>{" "}
@@ -120,7 +120,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text- md:text-lg text-white/90 mb-10 max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto"
         >
           GradeNext uses cutting-edge AI to deliver adaptive, engaging learning pathways, unlocking each student&apos;s potential for success and deeper understanding.
         </motion.p>

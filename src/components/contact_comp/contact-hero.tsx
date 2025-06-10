@@ -73,7 +73,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
+          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-lg font-medium"
         >
           Get In Touch
         </motion.div>
@@ -91,7 +91,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
+          className=" md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
         >
           Have questions or ready to transform your educational experience? Our team is here to help you every step of
           the way.

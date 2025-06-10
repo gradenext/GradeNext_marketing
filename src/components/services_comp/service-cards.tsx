@@ -151,14 +151,14 @@ export default function ServiceCards() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 font-medium mb-6 text-lg">
             <Sparkles className="w-4 h-4" />
             Complete Learning Ecosystem
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
             Your Complete GradeNext Learning Ecosystem
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed">
             Explore our comprehensive range of educational technology services designed to transform the learning
             experience with cutting-edge AI and innovative teaching methodologies.
           </p>
@@ -172,7 +172,7 @@ export default function ServiceCards() {
               <motion.button
                 key={service.id}
                 onClick={() => setActiveService(service.id)}
-                className={`group flex items-center gap-3 px-6 py-4 rounded-2xl text-sm md:text-base font-medium transition-all duration-300 ${
+                className={`group flex items-center gap-3 px-6 py-4 rounded-2xl text-md md:text-lg font-medium transition-all duration-300 ${
                   activeService === service.id
                     ? `bg-gradient-to-r ${service.color} text-white shadow-xl shadow-blue-500/25`
                     : `bg-white ${service.textColor} hover:bg-gray-50 border border-gray-200 hover:border-gray-300 shadow-sm`
@@ -255,12 +255,12 @@ export default function ServiceCards() {
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <service.icon className={`w-8 h-8 ${service.textColor}`} />
-                          <h3 className={`text-2xl md:text-3xl font-bold ${service.textColor}`}>{service.title}</h3>
+                          <h3 className={`text-3xl md:text-4xl font-bold ${service.textColor}`}>{service.title}</h3>
                         </div>
-                        <p className="text-gray-600 mb-8 text-lg leading-relaxed">{service.description}</p>
+                        <p className="text-gray-600 mb-8 text-xl leading-relaxed">{service.description}</p>
 
                         <div className="mb-8">
-                          <h4 className="font-bold text-gray-800 mb-6 text-lg flex items-center gap-2">
+                          <h4 className="font-bold text-gray-800 mb-6 text-xl flex items-center gap-2">
                             <Target className="w-5 h-5 text-gray-600" />
                             Key Features:
                           </h4>
@@ -278,7 +278,7 @@ export default function ServiceCards() {
                                 >
                                   <CheckCircle className="w-4 h-4 text-white" />
                                 </div>
-                                <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-200">
+                                <span className="text-gray-700 group-hover:text-gray-900 text-lg transition-colors duration-200">
                                   {feature}
                                 </span>
                               </motion.li>

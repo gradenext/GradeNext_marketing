@@ -55,19 +55,19 @@ const pricingPlans = [
     shadowColor: "rgba(139, 92, 246, 0.25)",
   },
   {
-    name: "Advance",
+    name: "Accelerated",
     price: "Contact ",
     period: " us",
     description: "Best for advance learner for competitive exams",
     features: [
       { name: "All Pro features access", included: true },
-      { name: "Custom design advancing learning program", included: true },
+      { name: "Competitive exam-focused plan", included: true },
       { name: "Dedicated personalized 1:1 tutor support", included: true },
       { name: "Advanced analytics, goal tracking & reports", included: true },
       // { name: "Custom learning paths", included: true },
       // { name: "Dedicated tutor support", included: true },
       // { name: "Advanced analytics & reports", included: true },
-      { name: "1-on-1 student mentoring", included: true },
+      { name: "Goal-based exam planning", included: true },
       { name: "Priority support & onboarding", included: true },
     ],
     buttonText: "Contact Us",
@@ -154,7 +154,7 @@ export default function PricingSection() {
                       <div className={`p-2 rounded-lg bg-gradient-to-br ${plan.gradient} text-white mr-3`}>
                         <plan.icon className="h-5 w-5" />
                       </div>
-                      <h3 className="text-xl font-semibold">{plan.name}</h3>
+                      <h3 className="text-3xl font-semibold">{plan.name}</h3>
                     </div>
 
                     <div className="flex items-baseline">
@@ -165,10 +165,10 @@ export default function PricingSection() {
                       </span>
                       <span className="text-slate-500 ml-1">{plan.period}</span>
                     </div>
-                    <div className="text-slate-600 mt-2">{plan.description}</div>
+                    <div className="text-slate-600 mt-2 text-lg">{plan.description}</div>
                   </div>
 
-                  <div className="space-y-4 mb-8">
+                  <div className="space-y-4 mb-8 text-lg">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
                         {feature.included ? (
@@ -188,7 +188,7 @@ export default function PricingSection() {
                   </div>
                   <Link href="https://app.gradenext.com/">
                   <AnimatedButton
-                    className={`w-full transition-all relative overflow-hidden
+                    className={`w-full transition-all relative overflow-hidden text-lg
                       ${
                         plan.recommended
                         ? `bg-gradient-to-r ${plan.gradient} hover:shadow-lg hover:shadow-violet-500/20 text-white`

@@ -199,7 +199,7 @@ export default function PlatformFeatures() {
                     activeFeature === key ? "text-emerald-600" : "text-gray-500"
                   }`} 
                 />
-                <span className={`font-medium text-sm ${
+                <span className={`font-medium text-md ${
                   activeFeature === key ? "text-emerald-700" : "text-gray-700"
                 }`}>
                   {feature.title}

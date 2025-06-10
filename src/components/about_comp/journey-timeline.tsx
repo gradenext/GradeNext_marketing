@@ -116,7 +116,7 @@ export default function EducationalImpact() {
               variants={tabVariants}
               initial="inactive"
               animate={activeTab === tab ? "active" : "inactive"}
-              className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-all ${
+              className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-md md:text-base font-medium transition-all ${
                 activeTab === tab
                   ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"

@@ -41,7 +41,7 @@ export default function Header() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
             <Link href="/" className=" md:flex hidden items-center space-x-2">
               
-              <span className="text-sm font-semibold ">
+              <span className="text-md font-semibold ">
                 Follow Us : 
               </span>
             </Link>

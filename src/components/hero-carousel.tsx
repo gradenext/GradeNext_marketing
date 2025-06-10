@@ -10,7 +10,7 @@ const slides = [
     gradient: "bg-gradient-to-br from-violet-600 via-purple-600 to-blue-600",
     accentGradient: "from-yellow-400 to-orange-500",
     icon: Zap,
-    heading: "AI-Driven After School Learning Platforms",
+    heading: "AI-Driven After School Learning Platform Grade 1-8th",
     subheading: "Adaptive Learning & Performance Tracking",
     paragraph:
       "Unlock personalized learning with real-time AI insights. Stay on track with adaptive practice, smart revisions, and interactive challenges designed for your success.",
@@ -22,10 +22,10 @@ const slides = [
     gradient: "bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-600",
     accentGradient: "from-pink-400 to-rose-500",
     icon: BookOpen,
-    heading: "Reimagining Math, Science and English Learning",
-    subheading: "Built with Stanford & Harvard Experts",
+    heading: "Reimagining Math, Science and English Learning Art",
+    subheading: "Built with Stanford & Harvard University Experts",
     paragraph:
-      "Developed with insights from top educators and researchers, Grade Next integrates proven learning methodologies to enhance student success.",
+      "Developed with insights from top educators and researchers, GradeNext integrates proven learning methodologies to enhance student success.",
     buttonLink: "/stanford-partnership",
     decorativeElements: "waves",
   },
@@ -37,7 +37,7 @@ const slides = [
     heading: "Building Students Future with Computational Thinking",
     subheading: "Empowering Education with Innovation",
     paragraph:
-      "Grade Next uses programming to nurture computational thinking, helping students build problem-solving skills and thrive in a tech-driven world.",
+      "GradeNext uses programming to nurture computational thinking, helping students build problem-solving skills and thrive in a tech-driven world.",
     buttonLink: "/harvard-partnership",
     decorativeElements: "dots",
   },
@@ -167,7 +167,7 @@ export default function HeroCarousel() {
                     currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                   }`}
                 >
-                  <h3 className="text-white text-sm md:text-base font-semibold tracking-wide uppercase">
+                  <h3 className="text-white text-md md:text-base font-semibold tracking-wide uppercase">
                     {slide.subheading}
                   </h3>
                 </div>

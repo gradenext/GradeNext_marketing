@@ -60,14 +60,14 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 rounded-full text-md font-medium mb-6">
                 <Sparkles className="w-4 h-4" />
                 Why Choose GradeNext?
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
                 Experience the Future of Personalized Education
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Our platform uniquely blends the power of artificial intelligence with insights from leading educational
                 institutions to create a learning experience that is truly tailored to you.
               </p>
@@ -88,10 +88,10 @@ export default function FeaturesSection() {
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-indigo-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-indigo-600 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-600 text-lg group-hover:text-gray-700 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -200,7 +200,7 @@ export default function FeaturesSection() {
                   95%
                 </div>
               </div>
-              <div className="text-sm text-gray-600 font-medium">Satisfaction Rate</div>
+              <div className="text-md text-gray-600 font-medium">Satisfaction Rate</div>
             </motion.div>
 
             <motion.div
@@ -218,7 +218,7 @@ export default function FeaturesSection() {
                   24/7
                 </div>
               </div>
-              <div className="text-sm text-gray-600 font-medium">Support Available</div>
+              <div className="text-md text-gray-600 font-medium">Support Available</div>
             </motion.div>
 
             {/* Additional Floating Stats */}

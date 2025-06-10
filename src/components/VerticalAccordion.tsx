@@ -26,7 +26,7 @@ const items = [
     content: {
       subtitle: "AI-Powered Adaptive Learning & Real-Time Performance Tracking",
       description:
-        "Effective learning requires consistent reinforcement, and Grade Next’s AI-powered smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional AI-driven practice sessions are introduced to solidify understanding before moving forward.",
+        "Effective learning requires consistent reinforcement, and GradeNext’s AI-powered smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional AI-driven practice sessions are introduced to solidify understanding before moving forward.",
       stats: [
         { label: "Skill Improvement", value: "94%" },
         { label: "Concept Mastery", value: "91%" },
@@ -54,7 +54,7 @@ const items = [
     content: {
       subtitle: "Personalized Assistance & Concept Clarity",
       description:
-        "Grade Next bridges the gap between independent learning and expert guidance. If a student consistently struggles with specific topics, tutors are automatically notified to intervene and provide personalized support. One-on-one revision sessions ensure concept clarity, helping students overcome challenges with targeted explanations and guided practice. This direct interaction fosters confidence, encourages deeper understanding, and ensures that no student is left behind.",
+        "GradeNext bridges the gap between independent learning and expert guidance. If a student consistently struggles with specific topics, tutors are automatically notified to intervene and provide personalized support. One-on-one revision sessions ensure concept clarity, helping students overcome challenges with targeted explanations and guided practice. This direct interaction fosters confidence, encourages deeper understanding, and ensures that no student is left behind.",
       stats: [
         { label: "Problem-Solving", value: "93%" },
         { label: "Critical Thinking", value: "89%" },
@@ -62,34 +62,34 @@ const items = [
       ],
     },
   },
-  {
-    id: 2,
-    title: "Future-Ready Skills",
-    color: "bg-emerald-500",
-    hoverColor: "group-hover:bg-emerald-600",
-    textColor: "text-emerald-50",
-    gradientColor: "from-emerald-500 via-emerald-600 to-emerald-700",
-    lightColor: "from-emerald-500/10 to-emerald-600/10",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
+{
+  id: 2,
+  title: "Smart Math Skills",
+  color: "bg-emerald-500",
+  hoverColor: "group-hover:bg-emerald-600",
+  textColor: "text-emerald-50",
+  gradientColor: "from-emerald-500 via-emerald-600 to-emerald-700",
+  lightColor: "from-emerald-500/10 to-emerald-600/10",
+  image: "https://images.unsplash.com/photo-1604081353631-86c8f2fc2d7b?q=80&w=2070&auto=format&fit=crop",
+  description:
+    "Master Mental Math & Calculation Speed. Equip learners with powerful mental techniques to solve complex problems quickly, enhancing memory, focus, and numerical fluency through fun, real-life scenarios and brain-training activities.",
+  features: [
+    "Mental calculation without pen and paper",
+    "Daily speed drills to improve reaction time",
+    "Brain exercises to build numerical memory",
+    "Gamified challenges to sharpen focus and accuracy",
+  ],
+  content: {
+    subtitle: "Fast Thinking & Mental Calculation",
     description:
-      "Develop Logical Thinking & Problem-Solving Abilities. Empower learners with structured exercises designed to enhance cognitive abilities, logical reasoning, and structured thinking through engaging challenges and real-world projects.",
-    features: [
-      "Logical reasoning and structured thinking exercises",
-      "Project-based learning for skill development",
-      "Problem-solving challenges for better understanding",
-      "Interactive modules to boost creativity and innovation",
+      "Our smart math program helps students master mental arithmetic techniques that dramatically boost calculation speed and confidence. With zero dependency on pen and paper, learners engage in brain-stimulating challenges and real-world problem scenarios. The curriculum enhances focus, memory retention, and math fluency while making learning exciting and relevant. This foundational skill not only helps in academics but also supports quick thinking in everyday decision-making.",
+    stats: [
+      { label: "Mental Math Speed", value: "93%" },
+      { label: "Numerical Fluency", value: "94%" },
+      { label: "Focus & Recall", value: "4.8/5" },
     ],
-    content: {
-      subtitle: "Logical Reasoning & Cognitive Development",
-      description:
-        "Our future-ready skills program empowers learners with structured exercises designed to enhance cognitive abilities, logical reasoning, and structured thinking. Through engaging challenges and real-world projects, students develop essential problem-solving abilities that prepare them for future academic and career success. Our project-based learning approach and interactive modules boost creativity and innovation while building a strong foundation in logical reasoning that transfers across disciplines and real-life situations.",
-      stats: [
-        { label: "Logical Reasoning", value: "95%" },
-        { label: "Cognitive Growth", value: "92%" },
-        { label: "Innovation Skills", value: "4.9/5" },
-      ],
-    },
   },
+}
 ]
 
 const VerticalAccordionWithPopup = () => {
@@ -132,7 +132,7 @@ const VerticalAccordionWithPopup = () => {
           text-orientation: mixed;
         }
       `}</style>
-      <h1 className="pt-8 sm:pt-12 lg:pt-32 pb-8 sm:pb-12 text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
+      <h1 className="pt-8 sm:pt-12 lg:pt-32 pb-8 sm:pb-12 text-2xl sm:text-4xl lg:text-5xl font-bold text-center">
         The GradeNext Programme
       </h1>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-2 sm:gap-4 lg:gap-6 justify-center min-h-[50vh] sm:min-h-screen p-2 sm:p-4">
@@ -173,8 +173,8 @@ const VerticalAccordionWithPopup = () => {
                   absolute transition-all duration-500 lg:-rotate-90 whitespace-nowrap  font-bold tracking-wider ${item.textColor}
                   ${
                     activeItem === item.id
-                      ? "lg:left-10 lg:rotate-0 whitespace-nowrap lg:top-10 lg:text-4xl text-2xl left-6 top-6"
-                      : "lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-xl text-xl left-6 top-1/2 -translate-y-1/2"
+                      ? "lg:left-10 lg:rotate-0 whitespace-nowrap lg:top-10 lg:text-[42px] text-3xl left-6 top-6"
+                      : "lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-2xl text-2xl left-6 top-1/2 -translate-y-1/2"
                   }
                   ${activeItem !== item.id ? "lg:vertical-text" : ""}
                 `}
@@ -191,7 +191,7 @@ const VerticalAccordionWithPopup = () => {
               `}
               >
                 <p
-                  className={`text-sm sm:text-base lg:text-lg font-medium my-3 sm:my-4 lg:mb-6 ${item.textColor}
+                  className={`text-md sm:text-base lg:text-xl font-medium my-3 sm:my-4 lg:mb-6 ${item.textColor}
                 ${activeItem === item.id ? "block" : "hidden"}`}
                 >
                   {item.description}
@@ -208,7 +208,7 @@ const VerticalAccordionWithPopup = () => {
                       ${activeItem === item.id ? "block" : "hidden"}`}
                     >
                       <ArrowRight className={`w-3 sm:w-4 lg:w-5 h-3 sm:h-4 lg:h-5 ${item.textColor}`} />
-                      <span className={`${item.textColor} text-xs sm:text-sm lg:text-base`}>{feature}</span>
+                      <span className={`${item.textColor} text-xs sm:text-md lg:text-base`}>{feature}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -220,7 +220,7 @@ const VerticalAccordionWithPopup = () => {
                   onClick={() => handleLearnMore(item.id)}
                   className={`
                   mt-4 sm:mt-6 lg:mt-8 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-full border-2 border-current
-                  bg-white hover:scale-95 transition-all text-gray-900 duration-300 text-xs sm:text-sm lg:text-base
+                  bg-white hover:scale-95 transition-all text-gray-900 duration-300 text-xs sm:text-md lg:text-base
                   ${activeItem === item.id ? "block" : "hidden"}
                 `}
                 >
@@ -278,7 +278,7 @@ const VerticalAccordionWithPopup = () => {
                               <p className="text-base sm:text-lg lg:text-xl text-gray-600">{item.content.subtitle}</p>
                             </div>
 
-                            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                            <p className="text-md sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                               {item.content.description}
                             </p>
 
@@ -297,7 +297,7 @@ const VerticalAccordionWithPopup = () => {
                                   >
                                     {stat.value}
                                   </div>
-                                  <div className="text-xs sm:text-sm lg:text-sm text-gray-600 mt-1">{stat.label}</div>
+                                  <div className="text-xs sm:text-md lg:text-md text-gray-600 mt-1">{stat.label}</div>
                                 </motion.div>
                               ))}
                             </div>

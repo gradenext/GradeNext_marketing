@@ -133,7 +133,7 @@ export function AnimatedPricingCard({
 export function AnimatedRecommendedBadge() {
   return (
     <motion.span
-      className="bg-gradient-to-r from-violet-500 to-purple-600 text-white text-sm font-medium px-4 py-1 rounded-full inline-flex items-center shadow-lg shadow-purple-500/20"
+      className="bg-gradient-to-r from-violet-500 to-purple-600 text-white text-md font-medium px-4 py-1 rounded-full inline-flex items-center shadow-lg shadow-purple-500/20"
       initial={{ scale: 1 }}
       animate={{ scale: [1, 1.05, 1] }}
       transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}

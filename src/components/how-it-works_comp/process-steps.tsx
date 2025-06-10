@@ -75,10 +75,10 @@ export default function ProcessSteps() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             Our Simple 4-Step Process
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             We&apos;ve designed a streamlined process to help you implement our educational technology platform quickly and
             effectively.
           </p>
@@ -120,7 +120,7 @@ export default function ProcessSteps() {
                 >
                   {step.icon}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.title}</h3>
+                <h3 className="text-2xl md:text-4xl font-bold mb-4">{step.title}</h3>
                 <p className="text-lg text-gray-600 mb-8">{step.description}</p>
 
                 <div className="space-y-3">
@@ -134,7 +134,7 @@ export default function ProcessSteps() {
                       className="flex items-start gap-3"
                     >
                       <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700 text-lg">{feature}</span>
                     </motion.div>
                   ))}
                 </div>

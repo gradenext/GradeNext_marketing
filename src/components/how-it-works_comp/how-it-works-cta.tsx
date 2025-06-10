@@ -16,7 +16,7 @@ export default function HowItWorksCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            className="text-3xl md:text-5xl font-bold mb-6"
           >
             Ready to Transform Your Educational Experience?
           </motion.h2>

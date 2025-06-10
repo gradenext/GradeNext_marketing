@@ -9,14 +9,14 @@ import { Button } from "@/components/ui/button"
 const tabs = [
   {
     id: "learning",
-    label: "The Grade Next Programme",
+    label: "The GradeNext Programme",
     title: "Adaptive Learning & Performance Tracking",
     color: "bg-linear-to-r from-lime-200 via-green-400 to-emerald-600",
     lightColor: "from-orange-500/10 to-orange-600/10",
     content: {
       subtitle: "Personalized Questioning & Progress Insights",
       description:
-        "Grade Next ensures that learning is tailored to each student’s needs through adaptive questioning. As students progress, the system dynamically adjusts the difficulty level, reinforcing weaker concepts before moving forward. Weekly and community tests provide structured assessments, enabling students to measure their growth, identify improvement areas, and stay motivated. The leader dashboard showcases individual and peer performance, fostering a competitive and goal-driven learning environment.",
+        "GradeNext ensures that learning is tailored to each student’s needs through adaptive questioning. As students progress, the system dynamically adjusts the difficulty level, reinforcing weaker concepts before moving forward. Weekly and community tests provide structured assessments, enabling students to measure their growth, identify improvement areas, and stay motivated. The leader dashboard showcases individual and peer performance, fostering a competitive and goal-driven learning environment.",
       stats: [
         { label: "Success Rate", value: "95%" },
         { label: "Student Progress", value: "89%" },
@@ -35,7 +35,7 @@ const tabs = [
     content: {
       subtitle: "Structured Review & Reinforcement",
       description:
-        "Effective learning requires consistent reinforcement, and Grade Next’s smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional practice sessions are introduced to solidify understanding before moving forward.",
+        "Effective learning requires consistent reinforcement, and GradeNext’s smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional practice sessions are introduced to solidify understanding before moving forward.",
       stats: [
         { label: "Concept Retention", value: "92%" },
         { label: "Practice Completion", value: "85%" },
@@ -54,7 +54,7 @@ const tabs = [
     content: {
       subtitle: "One-on-One Guidance & Targeted Explanations",
       description:
-        "Grade Next bridges the gap between independent learning and expert guidance. If a student consistently struggles with specific topics, tutors are automatically notified to intervene and provide personalized support. One-on-one revision sessions ensure concept clarity, helping students overcome challenges with targeted explanations and guided practice. This direct interaction fosters confidence, encourages deeper understanding, and ensures that no student is left behind.",
+        "GradeNext bridges the gap between independent learning and expert guidance. If a student consistently struggles with specific topics, tutors are automatically notified to intervene and provide personalized support. One-on-one revision sessions ensure concept clarity, helping students overcome challenges with targeted explanations and guided practice. This direct interaction fosters confidence, encourages deeper understanding, and ensures that no student is left behind.",
       stats: [
         { label: "Concept Improvement", value: "90%" },
         { label: "Student Engagement", value: "88%" },
@@ -71,7 +71,7 @@ export default function OpeningScreen() {
   return (
     <section className="py-28 flex gap-8 justify-center items-center flex-col max-w-7xl mx-auto relative">
       <h2 className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-      The Grade Next Programme
+      The GradeNext Programme
       </h2>      {/* Grid Layout */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -94,10 +94,10 @@ export default function OpeningScreen() {
                 </div>
 
                 <div className="mt-auto">
-                  <p className="text-white/80 text-sm line-clamp-3">{tab.content.description}</p>
+                  <p className="text-white/80 text-md line-clamp-3">{tab.content.description}</p>
                 </div>
 
-                <button className="bg-white my-4 w-fit px-4 text-sm p-2 rounded-full">Learn more...</button>
+                <button className="bg-white my-4 w-fit px-4 text-md p-2 rounded-full">Learn more...</button>
               </div>
             </motion.div>
           ))}
@@ -164,7 +164,7 @@ export default function OpeningScreen() {
                                   >
                                     {stat.value}
                                   </div>
-                                  <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+                                  <div className="text-md text-gray-600 mt-1">{stat.label}</div>
                                 </motion.div>
                               ))}
                             </div>

@@ -93,14 +93,14 @@ export default function StickyScroll() {
                   {/* Left Content */}
                   <div className="flex flex-col justify-center">
                     <span
-                      className={`inline-block px-4 py-2 rounded-full ${section.tagColor} text-sm font-medium mb-2 lg:mb-6 w-fit`}
+                      className={`inline-block px-4 py-2 rounded-full ${section.tagColor} text-md font-medium mb-2 lg:mb-6 w-fit`}
                     >
                       {section.tag}
                     </span>
 
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 lg:mb-4">{section.title}</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 lg:mb-4">{section.title}</h2>
 
-                    <p className="text-gray-600 text-sm lg:text-lg">{section.description}</p>
+                    <p className="text-gray-600 text-md lg:text-xl">{section.description}</p>
                   </div>
 
                   {/* Right Content - Images */}

@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "Is there a mobile-friendly version?",
     answer:
-      "Yes, Grade Next is fully responsive and accessible across all devices, including smartphones, tablets, and desktops, so you can learn anytime, anywhere.",
+      "Yes, GradeNext is fully responsive and accessible across all devices, including smartphones, tablets, and desktops, so you can learn anytime, anywhere.",
     gradient: "from-emerald-500 to-teal-600",
     lightGradient: "from-emerald-100 to-teal-200",
     icon: "📱",
@@ -166,7 +166,7 @@ export default function FAQ() {
             </h2>
             <Sparkles className="text-amber-500 ml-2 h-8 w-8" />
           </div>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
             Everything you need to know about our service. Cant find the answer youre looking for?
             <a href="#" className="text-blue-600 hover:text-blue-800 ml-1 underline underline-offset-2">
               Contact our support team

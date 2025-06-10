@@ -45,10 +45,10 @@ export default function ServicesOverview() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
           Key Features  
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
           GradeNext provides a range of intelligent tools designed to personalize the learning journey 
           and drive academic achievement. 
           </p>
@@ -69,13 +69,13 @@ export default function ServicesOverview() {
                 <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-white/90">{service.description}</p>
+                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                <p className="text-white/90 text-lg">{service.description}</p>
               </div>
               {/* <div className="bg-white p-6">
                 <motion.button
                   whileHover={{ x: 5 }}
-                  className="text-sm font-medium flex items-center text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-md font-medium flex items-center text-gray-600 hover:text-indigo-600 transition-colors"
                 >
                   Learn more <span className="ml-2">→</span>
                 </motion.button>

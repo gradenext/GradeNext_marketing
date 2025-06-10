@@ -47,10 +47,10 @@ export default function ValuesSection() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
+          <h2 className="text-4xl md:text-5xl  font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
             Our Core Values
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             These principles guide everything we do, from product development to customer service.
           </p>
         </motion.div>
@@ -70,8 +70,8 @@ export default function ValuesSection() {
               >
                 {value.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-              <p className="text-gray-600">{value.description}</p>
+              <h3 className="text-3xl font-bold mb-2">{value.title}</h3>
+              <p className="text-gray-600 text-lg">{value.description}</p>
             </motion.div>
           ))}
         </div>

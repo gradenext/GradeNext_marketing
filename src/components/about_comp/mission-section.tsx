@@ -20,10 +20,10 @@ export default function MissionSection() {
           variants={fadeIn}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
             Our Mission & Vision
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             We&apos;re dedicated to revolutionizing education through technology, making learning more accessible,
             personalized, and effective for students of all ages and backgrounds.
           </p>
@@ -41,8 +41,8 @@ export default function MissionSection() {
             <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
               <Target className="w-7 h-7 text-emerald-600" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Our Mission</h3>
-            <p className="text-gray-600">
+            <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
+            <p className="text-gray-600 text-lg">
               To empower students through AI-driven personalized learning pathways, fostering
               deeper understanding, critical thinking, and continuous academic growth.
             </p>
@@ -59,8 +59,8 @@ export default function MissionSection() {
             <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
               <Lightbulb className="w-7 h-7 text-teal-600" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-            <p className="text-gray-600">
+            <h3 className="text-3xl font-bold mb-4">Our Vision</h3>
+            <p className="text-gray-600 text-lg">
               To be the leading platform that unlocks every student&apos;s potential through individually
               tailored education, supported by cutting-edge technology and expert insights.
             </p>
@@ -77,8 +77,8 @@ export default function MissionSection() {
             <div className="w-14 h-14 bg-cyan-100 rounded-lg flex items-center justify-center mb-6">
               <Users className="w-7 h-7 text-cyan-600" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Our Approach</h3>
-            <p className="text-gray-600">
+            <h3 className="text-3xl font-bold mb-4">Our Approach</h3>
+            <p className="text-gray-600 text-lg">
               GradeNext integrates advanced AI algorithms with established pedagogical principles
               to deliver dynamic learning experiences that adapt to each student&apos;s unique pace, strengths.
             </p>

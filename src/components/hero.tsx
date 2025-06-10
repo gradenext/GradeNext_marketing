@@ -65,13 +65,13 @@ export default function Hero() {
         >
           <div className="inline-block mb-4">
             <motion.div
-              className="bg-white/30 backdrop-blur-md rounded-full px-3 py-1 text-sm font-medium text-gray-700 border border-gray-200 shadow-sm"
+              className="bg-white/30 backdrop-blur-md rounded-full px-3 py-1 text-md font-medium text-gray-700 border border-gray-200 shadow-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="flex items-center">
                 <Sparkles className="w-4 h-4 mr-2 text-yellow-500" />
-                Learning With Grade Next
+                Learning With GradeNext
               </span>
             </motion.div>
           </div>
@@ -146,7 +146,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
           >
-            <h1>Enhance Learning with Grade Next </h1>
+            <h1>Enhance Learning with GradeNext </h1>
             <Image src="/hero.gif" width={100} height={100} alt="logo" />
 
           </motion.div>

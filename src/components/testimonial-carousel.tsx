@@ -202,7 +202,7 @@ export default function SurfCarousel() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
               Discover Personalized Learning Paths
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <p className="text-slate-600 max-w-2xl mx-auto text-xl">
               Whether your child is just starting out or looking to advance, explore tailored courses that build skills, boost confidence, and make learning truly engaging.
             </p>
           </motion.div>
@@ -241,7 +241,7 @@ export default function SurfCarousel() {
                       <div className="absolute inset-0 p-8 flex flex-col justify-between">
                         <div className="flex justify-between items-start">
                           <div>
-                            <div className="text-sm font-semibold mb-1 bg-white/80 text-blue-600 px-3 py-1 rounded-full inline-block">
+                            <div className="text-md font-semibold mb-1 bg-white/80 text-blue-600 px-3 py-1 rounded-full inline-block">
                               {course.occ}
                             </div>
                             
@@ -256,7 +256,7 @@ export default function SurfCarousel() {
                         </div>
 
                         <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-6 transform transition-all duration-300 group-hover:-translate-y-2">
-                          <h3 className="text-2xl font-bold mb-4 text-slate-800">{course.title}</h3>
+                          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-800">{course.title}</h3>
                           <div className="flex items-center space-x-3">
                             <div className="relative">
                               {/* <Image
@@ -269,8 +269,8 @@ export default function SurfCarousel() {
                               {/* <div className="absolute -bottom-1 -right-1 bg-green-500 h-3 w-3 rounded-full border-2 border-white"></div> */}
                             </div>
                             <div>
-                              <div className="text-sm font-medium text-slate-800">{course.instructor.name}</div>
-                              <div className="text-xs text-slate-500 flex items-center">
+                              <div className="text-md md:text-lg font-medium text-slate-800">{course.instructor.name}</div>
+                              <div className="text-xs md:text-sm text-slate-500 flex items-center">
                                 <svg className="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>
@@ -280,7 +280,7 @@ export default function SurfCarousel() {
                           </div>
 
                           <motion.div
-                            className={`mt-4 w-full py-2 text-left p-2 rounded-lg bg-gradient-to-r ${course.color} text-white font-medium text-sm shadow-md`}
+                            className={`mt-4 w-full py-2 text-left p-2 md:text-lg rounded-lg bg-gradient-to-r ${course.color} text-white font-medium text-md shadow-md`}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.98 }}
                           >

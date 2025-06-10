@@ -149,7 +149,7 @@ export default function MainNavbar() {
           {/* Logo */}
           <div className="">
             <Link href="/" className="flex items-center">
-              <Image src="/logo.png" alt="Logo" width={100} height={20} />
+              <Image src="/logo.png" alt="Logo" width={120} height={20} />
             </Link>
           </div>
 
@@ -159,7 +159,7 @@ export default function MainNavbar() {
               <button
                 key={item.href}
                 onClick={() => handleNavigation(item.href)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-full text-lg font-medium transition-all ${
                   pathname === item.href
                     ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
                     : "text-gray-700 hover:bg-gray-100"
@@ -175,13 +175,13 @@ export default function MainNavbar() {
             <Button
               onClick={() => router.push("https://app.gradenext.com/")}
               variant="outline"
-              className="rounded-full border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
+              className="rounded-full border-2 border-violet-500 text-violet-600 text-lg h-full hover:bg-violet-50"
             >
               Student Login
             </Button>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZP4ocvXbO1RjyySPfQB5_46oHnOLgZhVkx7wFq6r6n7qtQ/viewform" target="_blank">
             <Button
-              className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
+              className="rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 h-full text-white text-lg hover:from-violet-700 hover:to-indigo-700"
             >
               Become a Tutor
             </Button>
@@ -209,7 +209,7 @@ export default function MainNavbar() {
               <button
                 key={item.href}
                 onClick={() => handleNavigation(item.href)}
-                className={`flex items-center px-4 py-3 rounded-lg text-left text-sm font-medium transition-colors ${
+                className={`flex items-center px-4 py-3 rounded-lg text-left text-md font-medium transition-colors ${
                   pathname === item.href
                     ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
                     : "text-gray-700 hover:bg-gray-100"

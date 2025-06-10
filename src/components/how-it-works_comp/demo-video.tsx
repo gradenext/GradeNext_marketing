@@ -21,10 +21,10 @@ export default function DemoVideo() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             See Our Platform in Action
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             Watch this short demo to see how our platform transforms the educational experience for students and
             teachers.
           </p>
@@ -52,7 +52,7 @@ export default function DemoVideo() {
                 </div>
                 <div className="absolute inset-0 z-40 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 z-40 left-8 right-8 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Platform Overview: Transforming Education</h3>
+                  <h3 className="text-3xl font-bold mb-2">Platform Overview: Transforming Education</h3>
                   <p className="text-white/80">2:45 min</p>
                 </div>
                 <div
@@ -101,7 +101,7 @@ export default function DemoVideo() {
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-xl font-bold mb-3 text-blue-600">{item.title}</h3>
+              <h3 className="text-2xl font-bold mb-3 text-blue-600">{item.title}</h3>
               <p className="text-gray-600">{item.description}</p>
             </motion.div>
           ))}

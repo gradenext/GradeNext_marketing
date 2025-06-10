@@ -99,7 +99,7 @@ export default function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-medium"
+          className="inline-block mb-6 px-4 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-lg font-medium"
         >
        Intelligent Learning Solutions
         </motion.div>
@@ -120,7 +120,7 @@ export default function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className=" md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
+          className=" text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
         >
           Discover our comprehensive suite of educational technology services designed to transform how students learn
           and educators teach.

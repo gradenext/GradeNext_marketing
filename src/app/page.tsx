@@ -24,7 +24,7 @@ export default function Home() {
       {/* <SustainableSection /> */}
       <StickyScroll />
       {/* <TextParallaxContentExample /> */}
-<ComparisonTable/>
+      <ComparisonTable/>
       <PricingSection />
       <SurfCarousel />
       <FAQ />

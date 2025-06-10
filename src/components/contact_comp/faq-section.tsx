@@ -49,10 +49,10 @@ export default function FaqSection() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             Find quick answers to common questions about contacting and working with us.
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ export default function FaqSection() {
                     : "bg-gray-50 hover:bg-gray-100"
                 }`}
               >
-                <span className="text-lg font-medium">{faq.question}</span>
+                <span className="text-xl font-medium">{faq.question}</span>
                 <ChevronDown
                   className={`w-5 h-5 transition-transform ${activeIndex === index ? "transform rotate-180" : ""}`}
                 />

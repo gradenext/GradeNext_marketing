@@ -66,7 +66,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
+                    className={`relative px-4 py-2 text-md font-medium rounded-full transition-colors duration-300 ${
                       pathname === item.href
                         ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md"
                         : "text-gray-700 hover:bg-gray-100"

@@ -7,9 +7,9 @@ import { Github, Linkedin, Twitter } from "lucide-react"
 export default function TeamSection() {
   const team = [
     {
-      name: "Mohammad shahid, PhD",
+      name: "MD shahid, PhD",
       role: "Founder & CEO",
-      bio: "Dedicated Scientist, more than 15 years experience in education field.",
+      bio: "Dedicated Neuroscientist, Business Entrepreneur, more than 15 years experience in education.",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
@@ -21,16 +21,16 @@ export default function TeamSection() {
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
-      name: "Mohammad Rashid, MCA",
+      name: "MD Rashid, MCA",
       role: "Asia and Japan Head",
-      bio: "Dedicated Software Engineer, more than 20 years of experience in child education.",
+      bio: "Dedicated Software Engineer, AI expert, more than 15 years of experience in Software Development.",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
       name: "Kuldeep Kushwah, B.Tech",
       role: "Global Technical Head",
-      bio: "Professional IT expert, more than 10 years of IT business experience.",
+      bio: "Professional IT expert, Machine learning programmer, more than 10 years of IT business experience.",
       image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
@@ -46,8 +46,8 @@ export default function TeamSection() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Team</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-4xl md:text-5xl  font-bold mb-6">Meet Our Team</h2>
+          <p className="text-xl text-gray-600">
             Our diverse team of educators, technologists, and innovators is united by a shared passion for transforming
             education.
           </p>
@@ -67,9 +67,9 @@ export default function TeamSection() {
                 <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
               </div> */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-violet-600 font-medium mb-4">{member.role}</p>
-                <p className="text-gray-600 mb-6">{member.bio}</p>
+                <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
+                <p className="text-violet-600 font-medium mb-2 text-lg">{member.role}</p>
+                <p className="text-gray-600 mb-6 text-lg">{member.bio}</p>
                 <div className="flex space-x-4">
                   <a href="#" className="text-gray-400 hover:text-violet-600 transition-colors">
                     <Twitter className="w-5 h-5" />
@@ -93,7 +93,7 @@ export default function TeamSection() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center mt-12"
         >
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             And 50+ more talented individuals working together to revolutionize education.
           </p>
         </motion.div>

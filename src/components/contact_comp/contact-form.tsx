@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2 } from "lucide-react";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -28,27 +28,27 @@ export default function ContactForm() {
 
     if (!formRef.current) return;
 
-    try {
-      const result = await emailjs.sendForm(
-        "service_xobfjwb",
-        "template_h9emr4m",
-        formRef.current,
-        "Ft8uNCuazhkwgKyLE"
-      );
+  //   try {
+  //     const result = await emailjs.sendForm(
+  //       "service_xobfjwb",
+  //       "template_h9emr4m",
+  //       formRef.current,
+  //       "Ft8uNCuazhkwgKyLE"
+  //     );
 
-      if (result.status === 200) {
-        setIsSubmitted(true);
-      } else {
-        throw new Error("Failed to send message. Please try again.");
-      }
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "An unexpected error occurred"
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //     if (result.status === 200) {
+  //       setIsSubmitted(true);
+  //     } else {
+  //       throw new Error("Failed to send message. Please try again.");
+  //     }
+  //   } catch (err) {
+  //     setError(
+  //       err instanceof Error ? err.message : "An unexpected error occurred"
+  //     );
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+   };
 
   return (
     <section className="py-20 bg-white">
@@ -61,16 +61,16 @@ export default function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
               Send Us a Message
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Fill out the form below and our team will get back to you within 24 hours.
             </p>
 
             <div className="bg-gradient-to-br from-purple-100 to-indigo-100 p-6 rounded-xl mb-8">
-              <h3 className="text-xl font-bold mb-4 text-purple-700">Why Contact Us?</h3>
-              <ul className="space-y-3">
+              <h3 className="text-2xl md:text-4xl font-bold mb-4 text-purple-700">Why Contact Us?</h3>
+              <ul className="space-y-3 text-lg">
                 {[
                   "Get a personalized demo of our platform",
                   "Learn about pricing and implementation",
@@ -127,20 +127,20 @@ export default function ContactForm() {
                 </Button>
               </motion.div>
             ) : (
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 md:text-lg">
                 {error && (
-                  <div className="text-red-500 text-sm text-center">{error}</div>
+                  <div className="text-red-500 text-md text-center">{error}</div>
                 )}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="firstName" className="text-sm font-medium">
+                    <label htmlFor="firstName" className="text-md font-medium">
                       First Name
                     </label>
                     <Input id="firstName" name="firstName" required placeholder="John" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="lastName" className="text-sm font-medium">
+                    <label htmlFor="lastName" className="text-md font-medium">
                       Last Name
                     </label>
                     <Input id="lastName" name="lastName" required placeholder="Doe" />
@@ -148,21 +148,21 @@ export default function ContactForm() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
+                  <label htmlFor="email" className="text-md font-medium">
                     Email Address
                   </label>
                   <Input type="email" id="email" name="email" required placeholder="john@example.com" />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium">
+                  <label htmlFor="phone" className="text-md font-medium">
                     Phone Number (Optional)
                   </label>
                   <Input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="inquiry" className="text-sm font-medium">
+                  <label htmlFor="inquiry" className="text-md font-medium">
                     Inquiry Type
                   </label>
                   <Select name="inquiry">
@@ -180,7 +180,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
+                  <label htmlFor="message" className="text-md font-medium">
                     Message
                   </label>
                   <Textarea id="message" name="message" rows={5} required placeholder="Tell us how we can help you..." />

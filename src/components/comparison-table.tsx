@@ -122,7 +122,7 @@ const CellContent = ({ value, gradient }: { value: string; gradient: string }) =
         >
           <Check className="w-5 h-5 text-white" />
         </motion.div>
-        <span className="text-sm text-slate-700">{value.replace("✓", "").trim()}</span>
+        <span className="text-md text-slate-700">{value.replace("✓", "").trim()}</span>
       </div>
     )
   } else if (
@@ -145,7 +145,7 @@ const CellContent = ({ value, gradient }: { value: string; gradient: string }) =
         >
           <X className="w-5 h-5 text-red-600" />
         </motion.div>
-        <span className="text-sm text-slate-700">{value.replace("✗", "").trim()}</span>
+        <span className="text-md text-slate-700">{value.replace("✗", "").trim()}</span>
       </div>
     )
   } else if (
@@ -165,13 +165,13 @@ const CellContent = ({ value, gradient }: { value: string; gradient: string }) =
         >
           <Check className="w-5 h-5 text-amber-600" />
         </motion.div>
-        <span className="text-sm text-slate-700">{value}</span>
+        <span className="text-md text-slate-700">{value}</span>
       </div>
     )
   }
 
   return (
-    <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm font-medium text-slate-700">
+    <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-md font-medium text-slate-700">
       {value}
     </motion.span>
   )
@@ -197,7 +197,7 @@ export default function UpdatedComparisonTable() {
               <Sparkles className="h-6 w-6 text-teal-500" />
             </div>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              See how Grade Next compares to other leading educational platforms
+              See how GradeNext compares to other leading educational platforms
             </p>
           </motion.div>
 
