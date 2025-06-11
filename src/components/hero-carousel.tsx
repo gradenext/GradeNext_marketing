@@ -47,16 +47,7 @@ export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  // Auto-advance slides
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 15000) // Change slide every 15 seconds
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const nextSlide = () => {
+    const nextSlide = () => {
     if (!isAnimating) {
       setIsAnimating(true)
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
@@ -71,6 +62,17 @@ export default function HeroCarousel() {
       setTimeout(() => setIsAnimating(false), 600)
     }
   }
+
+  // Auto-advance slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 15000) // Change slide every 15 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
+
 
   const GeometricDecorations = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">

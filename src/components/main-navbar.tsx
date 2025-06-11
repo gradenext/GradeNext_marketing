@@ -47,10 +47,10 @@ export default function MainNavbar() {
     setIsOpen(false)
   }, [pathname])
 
-  const handleTutorOpen = () => {
-    setIsOpen(false); // Close the menu
-    setisTutorOpen(true);
-  };
+  // const handleTutorOpen = () => {
+  //   setIsOpen(false); // Close the menu
+  //   setisTutorOpen(true);
+  // };
   
 
   const navItems = [
