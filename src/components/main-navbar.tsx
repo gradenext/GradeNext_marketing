@@ -223,18 +223,19 @@ export default function MainNavbar() {
 
           <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-gray-100">
             <Button
-              onClick={() => console.log("Login clicked")}
+              onClick={() => router.push("https://app.gradenext.com/")}
               variant="outline"
-              className="rounded-lg border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
+              className="rounded-lg w-full h-full border-2 border-violet-500 text-violet-600 hover:bg-violet-50"
             >
              Student Login
             </Button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZP4ocvXbO1RjyySPfQB5_46oHnOLgZhVkx7wFq6r6n7qtQ/viewform" target="_blank" className="w-full">
             <Button
-               onClick={handleTutorOpen}
-              className="rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
+              className="rounded-lg h-full w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700"
             >
               Become a Tutor
             </Button>
+            </a>
 
          
           </div>

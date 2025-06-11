@@ -7,7 +7,7 @@ import { Github, Linkedin, Twitter } from "lucide-react"
 export default function TeamSection() {
   const team = [
     {
-      name: "MD shahid, PhD",
+      name: "MD Shahid, PHD,PMP",
       role: "Founder & CEO",
       bio: "Dedicated Neuroscientist, Business Entrepreneur, more than 15 years experience in education.",
       image:

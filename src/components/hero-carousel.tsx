@@ -10,7 +10,7 @@ const slides = [
     gradient: "bg-gradient-to-br from-violet-600 via-purple-600 to-blue-600",
     accentGradient: "from-yellow-400 to-orange-500",
     icon: Zap,
-    heading: "AI-Driven After School Learning Platform Grade 1-8th",
+    heading: "AI-Driven After School Learning Platform Grade 1st-8th",
     subheading: "Adaptive Learning & Performance Tracking",
     paragraph:
       "Unlock personalized learning with real-time AI insights. Stay on track with adaptive practice, smart revisions, and interactive challenges designed for your success.",
