@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2 } from "lucide-react";
 // import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
+
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -28,27 +30,27 @@ export default function ContactForm() {
 
     if (!formRef.current) return;
 
-  //   try {
-  //     const result = await emailjs.sendForm(
-  //       "service_xobfjwb",
-  //       "template_h9emr4m",
-  //       formRef.current,
-  //       "Ft8uNCuazhkwgKyLE"
-  //     );
+    try {
+      const result = await emailjs.sendForm(
+        "service_mo597zf",
+        "template_blfb0a4",
+        formRef.current,
+        "lm8671wRuXNu8poP5"
+      );
 
-  //     if (result.status === 200) {
-  //       setIsSubmitted(true);
-  //     } else {
-  //       throw new Error("Failed to send message. Please try again.");
-  //     }
-  //   } catch (err) {
-  //     setError(
-  //       err instanceof Error ? err.message : "An unexpected error occurred"
-  //     );
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-   };
+      if (result.status === 200) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error("Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "An unexpected error occurred"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="py-20 bg-white">
