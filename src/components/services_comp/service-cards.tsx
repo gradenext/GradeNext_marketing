@@ -8,16 +8,16 @@ export default function ServiceCards() {
   const services = [
     {
       id: "adaptive-learning",
-      title: "Adaptive Learning Platform",
+      title: "AI-Driven Core Subject Mastery",
       description:
-        "Our flagship adaptive learning platform uses AI to create personalized learning paths for each student, ensuring they master concepts at their own pace.",
+        "Experience personalized education like never before with our AI-powered platform offering tailored courses in Math, Science, and English. Designed to adapt to each learner's pace and performance, GradeNext ensures concept clarity and academic growth across all core subjects.",
       icon: Brain,
       features: [
-        "Personalized learning paths",
-        "Real-time progress tracking",
-        "Adaptive difficulty adjustment",
-        "Comprehensive subject coverage",
-        "Engaging interactive content",
+        "AI-personalized Math, Science & English courses",
+        "Dynamic content tailored to student performance",
+        "Real-time feedback and progress insights",
+        "Adaptive difficulty for every learning level",
+        "Engaging lessons aligned with school curriculum",
       ],
       color: "from-blue-600 to-indigo-700",
       lightColor: "from-blue-50 to-indigo-50",
@@ -25,17 +25,17 @@ export default function ServiceCards() {
       bgPattern: "geometric",
     },
     {
-      id: "virtual-classroom",
-      title: "Virtual Classroom Solution",
+      id: "tutor-support",
+      title: "Expert Tutor Support",
       description:
-        "Create immersive virtual learning environments that facilitate collaboration, engagement, and effective knowledge transfer regardless of physical location.",
+        "Get access to qualified tutors who provide personalized academic guidance in Math, Science, and English. Our tutor support system ensures students receive the help they need, when they need it — through live sessions, doubt clearing, and continuous mentoring.",
       icon: Users,
       features: [
-        "HD video conferencing",
-        "Interactive whiteboard",
-        "Breakout rooms for group work",
-        "Integrated assessment tools",
-        "Session recording and playback",
+        "Live one-on-one & group tutoring sessions",
+        "Subject-specific support in Math, Science & English",
+        "On-demand doubt resolution",
+        "Progress tracking and mentor feedback",
+        "Flexible scheduling with session recordings",
       ],
       color: "from-purple-600 to-pink-700",
       lightColor: "from-purple-50 to-pink-50",
@@ -43,17 +43,17 @@ export default function ServiceCards() {
       bgPattern: "waves",
     },
     {
-      id: "assessment-analytics",
-      title: "Assessment & Analytics",
+      id: "coding-classes",
+      title: "Live Coding Classes & Practice",
       description:
-        "Comprehensive assessment tools paired with powerful analytics to measure learning outcomes and provide actionable insights for improvement.",
+        "Engaging and interactive coding classes designed to teach kids real-world programming skills. From visual programming to Python and web development, our structured curriculum makes learning to code fun, practical, and future-ready.",
       icon: BarChart3,
       features: [
-        "Diverse question formats",
-        "Automated grading",
-        "Performance analytics",
-        "Learning gap identification",
-        "Custom report generation",
+        "Live coding sessions with expert instructors",
+        "Beginner to advanced curriculum (Scratch, Python, Web Dev)",
+        "Project-based learning approach",
+        "Practice environment with instant feedback",
+        "Certificates and showcase opportunities",
       ],
       color: "from-emerald-600 to-teal-700",
       lightColor: "from-emerald-50 to-teal-50",
@@ -119,7 +119,7 @@ export default function ServiceCards() {
           backgroundSize: "60px 60px, 40px 40px, 80px 80px",
           opacity: 0.1,
         }}
-      
+
       ></div>
       <div
         className={`absolute top-16 right-16 w-8 h-8 bg-gradient-to-br ${color} rounded-full opacity-20 animate-bounce`}
@@ -172,11 +172,10 @@ export default function ServiceCards() {
               <motion.button
                 key={service.id}
                 onClick={() => setActiveService(service.id)}
-                className={`group flex items-center gap-3 px-6 py-4 rounded-2xl text-md md:text-lg font-medium transition-all duration-300 ${
-                  activeService === service.id
+                className={`group flex items-center gap-3 px-6 py-4 rounded-2xl text-md md:text-lg font-medium transition-all duration-300 ${activeService === service.id
                     ? `bg-gradient-to-r ${service.color} text-white shadow-xl shadow-blue-500/25`
                     : `bg-white ${service.textColor} hover:bg-gray-50 border border-gray-200 hover:border-gray-300 shadow-sm`
-                }`}
+                  }`}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

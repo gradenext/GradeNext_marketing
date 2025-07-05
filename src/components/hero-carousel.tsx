@@ -34,20 +34,21 @@ const slides = [
     gradient: "bg-gradient-to-br from-orange-500 via-red-500 to-pink-600",
     accentGradient: "from-blue-400 to-indigo-500",
     icon: Sparkles,
-    heading: "Building Students Future with Computational Thinking",
-    subheading: "Empowering Education with Innovation",
+    heading: "Empowering Young Minds Through Coding",
+    subheading: "Empowering the Next Generation of Innovators",
     paragraph:
-      "GradeNext uses programming to nurture computational thinking, helping students build problem-solving skills and thrive in a tech-driven world.",
-    buttonLink: "/harvard-partnership",
+      "GradeNext introduces kids to the world of coding through fun, hands-on learning experiences. From block-based programming to real-world projects in Python and web development, our curriculum builds logic, creativity, and future-ready skills.",
+    buttonLink: "/coding-curriculum",
     decorativeElements: "dots",
-  },
+  }
+
 ]
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
-    const nextSlide = () => {
+  const nextSlide = () => {
     if (!isAnimating) {
       setIsAnimating(true)
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
@@ -139,13 +140,12 @@ export default function HeroCarousel() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {slides.map((slide, index) => {
-        
+
         return (
           <div
             key={slide.id}
-            className={`absolute inset-0 h-full w-full transition-all duration-700 ease-in-out ${slide.gradient} ${
-              currentSlide === index ? "opacity-100 z-10 scale-100" : "opacity-0 z-0 scale-105"
-            }`}
+            className={`absolute inset-0 h-full w-full transition-all duration-700 ease-in-out ${slide.gradient} ${currentSlide === index ? "opacity-100 z-10 scale-100" : "opacity-0 z-0 scale-105"
+              }`}
           >
             {/* Decorative Elements */}
             {renderDecorations(slide.decorativeElements)}
@@ -157,17 +157,15 @@ export default function HeroCarousel() {
 
             <div className="container max-w-7xl mx-auto md:px-24 px-6 h-full flex items-center relative z-10">
               <div
-                className={`max-w-4xl transition-all duration-1000 ${
-                  currentSlide === index ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
-                }`}
+                className={`max-w-4xl transition-all duration-1000 ${currentSlide === index ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
+                  }`}
               >
                 {/* Icon */}
-                
+
                 {/* Subheading */}
                 <div
-                  className={`inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6 transition-all duration-700 delay-200 ${
-                    currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-                  }`}
+                  className={`inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6 transition-all duration-700 delay-200 ${currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                    }`}
                 >
                   <h3 className="text-white text-md md:text-base font-semibold tracking-wide uppercase">
                     {slide.subheading}
@@ -176,18 +174,16 @@ export default function HeroCarousel() {
 
                 {/* Main heading */}
                 <h1
-                  className={`text-white text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-700 delay-300 ${
-                    currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                  }`}
+                  className={`text-white text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-700 delay-300 ${currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                    }`}
                 >
                   {slide.heading}
                 </h1>
 
                 {/* Paragraph */}
                 <p
-                  className={`text-white/90 text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl transition-all duration-700 delay-500 ${
-                    currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-                  }`}
+                  className={`text-white/90 text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl transition-all duration-700 delay-500 ${currentSlide === index ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+                    }`}
                 >
                   {slide.paragraph}
                 </p>
@@ -234,11 +230,10 @@ export default function HeroCarousel() {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`relative transition-all duration-300 ${
-              currentSlide === index
+            className={`relative transition-all duration-300 ${currentSlide === index
                 ? "w-8 h-3 bg-white rounded-full"
                 : "w-3 h-3 bg-white/50 rounded-full hover:bg-white/70"
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

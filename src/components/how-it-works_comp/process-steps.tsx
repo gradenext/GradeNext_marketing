@@ -30,7 +30,7 @@ export default function ProcessSteps() {
       icon: <BookOpen className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
      image:
-        "/h2.png",
+        "/dashboard.png",
       features: ["Subject selection", "Choose learning mode", "Start your learning adventure"],
     },
     {
@@ -56,7 +56,7 @@ export default function ProcessSteps() {
       icon: <BarChart className="w-8 h-8" />,
       color: "from-emerald-500 to-teal-500",
  image:
-        "/h5.png",
+        "/profile.png",
       features: [
         "Performance dashboard",
         "Progress tracking",

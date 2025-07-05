@@ -22,7 +22,7 @@ export default function ContactInfo() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      details: ["supportgradenext@gmail.com"],
+      details: ["contact@gradenext.com"],
       color: "bg-pink-100",
       iconColor: "text-pink-600",
     },

@@ -8,29 +8,29 @@ import { Button } from "@/components/ui/button"
 const items = [
   {
     id: 0,
-    title: "Intelligent Education System",
-    color: "bg-red-500",
-    hoverColor: "group-hover:bg-red-600",
-    textColor: "text-red-50",
-    gradientColor: "from-red-500 via-red-600 to-red-700",
-    lightColor: "from-red-500/10 to-red-600/10",
-    image: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=2071&auto=format&fit=crop",
+    title: "Smart Math Skills",
+    color: "bg-emerald-500",
+    hoverColor: "group-hover:bg-emerald-600",
+    textColor: "text-emerald-50",
+    gradientColor: "from-emerald-500 via-emerald-600 to-emerald-700",
+    lightColor: "from-emerald-500/10 to-emerald-600/10",
+    image: "https://images.unsplash.com/photo-1604081353631-86c8f2fc2d7b?q=80&w=2070&auto=format&fit=crop",
     description:
-      "Unlock the future of your kid’s education with an AI-driven platform that personalizes learning and tracks student progress in real time. GradeNext offers a personalized, adaptive learning experience that dynamically adjusts to each student’s individual pace, learning style, and performance to stays on the path to success.",
+      "Master Mental Math & Calculation Speed. Equip learners with powerful mental techniques to solve complex problems quickly, enhancing memory, focus, and numerical fluency through fun, real-life scenarios and brain-training activities.",
     features: [
-      "Personalized practice sessions for better comprehension",
-      "Step-by-step learning to master key concepts",
-      "frappéInteractive exercises for skill enhancement",
-      "Continuous progress tracking and improvement",
+      "Mental calculation without pen and paper",
+      "Daily speed drills to improve reaction time",
+      "Brain exercises to build numerical memory",
+      "Gamified challenges to sharpen focus and accuracy",
     ],
     content: {
-      subtitle: "AI-Powered Adaptive Learning & Real-Time Performance Tracking",
+      subtitle: "Fast Thinking & Mental Calculation",
       description:
-        "Effective learning requires consistent reinforcement, and GradeNext’s AI-powered smart revision system ensures just that. The platform automatically schedules revisions based on past performance, helping students revisit and strengthen weak concepts. Weekly, 15-day, and monthly revision plans provide structured review sessions, ensuring long-term retention and mastery of topics. If students struggle repeatedly with specific concepts, additional AI-driven practice sessions are introduced to solidify understanding before moving forward.",
+        "Our smart math program helps students master mental arithmetic techniques that dramatically boost calculation speed and confidence. With zero dependency on pen and paper, learners engage in brain-stimulating challenges and real-world problem scenarios. The curriculum enhances focus, memory retention, and math fluency while making learning exciting and relevant. This foundational skill not only helps in academics but also supports quick thinking in everyday decision-making.",
       stats: [
-        { label: "Skill Improvement", value: "94%" },
-        { label: "Concept Mastery", value: "91%" },
-        { label: "Student Engagement", value: "4.8/5" },
+        { label: "Mental Math Speed", value: "93%" },
+        { label: "Numerical Fluency", value: "94%" },
+        { label: "Focus & Recall", value: "4.8/5" },
       ],
     },
   },
@@ -62,34 +62,35 @@ const items = [
       ],
     },
   },
-{
-  id: 2,
-  title: "Smart Math Skills",
-  color: "bg-emerald-500",
-  hoverColor: "group-hover:bg-emerald-600",
-  textColor: "text-emerald-50",
-  gradientColor: "from-emerald-500 via-emerald-600 to-emerald-700",
-  lightColor: "from-emerald-500/10 to-emerald-600/10",
-  image: "https://images.unsplash.com/photo-1604081353631-86c8f2fc2d7b?q=80&w=2070&auto=format&fit=crop",
-  description:
-    "Master Mental Math & Calculation Speed. Equip learners with powerful mental techniques to solve complex problems quickly, enhancing memory, focus, and numerical fluency through fun, real-life scenarios and brain-training activities.",
-  features: [
-    "Mental calculation without pen and paper",
-    "Daily speed drills to improve reaction time",
-    "Brain exercises to build numerical memory",
-    "Gamified challenges to sharpen focus and accuracy",
-  ],
-  content: {
-    subtitle: "Fast Thinking & Mental Calculation",
+  {
+    id: 2,
+    title: "Future-Ready Coding Education",
+    color: "bg-red-500",
+    hoverColor: "group-hover:bg-red-600",
+    textColor: "text-red-50",
+    gradientColor: "from-red-500 via-red-600 to-red-700",
+    lightColor: "from-red-500/10 to-red-600/10",
+    image: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=2071&auto=format&fit=crop",
     description:
-      "Our smart math program helps students master mental arithmetic techniques that dramatically boost calculation speed and confidence. With zero dependency on pen and paper, learners engage in brain-stimulating challenges and real-world problem scenarios. The curriculum enhances focus, memory retention, and math fluency while making learning exciting and relevant. This foundational skill not only helps in academics but also supports quick thinking in everyday decision-making.",
-    stats: [
-      { label: "Mental Math Speed", value: "93%" },
-      { label: "Numerical Fluency", value: "94%" },
-      { label: "Focus & Recall", value: "4.8/5" },
+      "Empower your child with future-ready skills through our hands-on coding classes. GradeNext offers an interactive platform where kids learn programming fundamentals, build real-world projects, and grow confident in logic and problem-solving — all while having fun!",
+    features: [
+      "Beginner to advanced coding curriculum",
+      "Real-world projects with step-by-step guidance",
+      "Interactive coding playground for hands-on learning",
+      "AI-guided practice and personalized feedback",
     ],
-  },
-}
+    content: {
+      subtitle: "Coding for Kids: Fun, Practical & Skill-Based Learning",
+      description:
+        "Our coding program is designed to introduce students to the world of technology in the most engaging way. From block-based programming to Python, web development, and game design — kids get a progressive curriculum that builds logical thinking and creativity. Practice sessions are adaptive, projects are exciting, and learning is personalized to ensure each student progresses confidently. Regular challenges and showcase opportunities keep students motivated and proud of what they create.",
+      stats: [
+        { label: "Project Completion Rate", value: "96%" },
+        { label: "Coding Skill Confidence", value: "92%" },
+        { label: "Student Satisfaction", value: "4.9/5" },
+      ],
+    },
+  }
+
 ]
 
 const VerticalAccordionWithPopup = () => {
@@ -140,11 +141,10 @@ const VerticalAccordionWithPopup = () => {
           <div
             key={item.id}
             className={`group flex flex-col items-center justify-center
-           ${
-              activeItem === item.id
+           ${activeItem === item.id
                 ? "h-[500px] sm:h-[550px] lg:h-[600px] lg:w-[800px]"
                 : "h-20 sm:h-24 lg:h-[600px] lg:w-32"
-            } 
+              } 
             w-full rounded-xl sm:rounded-2xl lg:rounded-3xl duration-500 transition-all relative overflow-hidden ${item.color}
             hover:shadow-xl cursor-pointer`}
             onClick={() => handleItemClick(item.id)}
@@ -171,10 +171,9 @@ const VerticalAccordionWithPopup = () => {
               <h1
                 className={`
                   absolute transition-all duration-500 lg:-rotate-90 whitespace-nowrap  font-bold tracking-wider ${item.textColor}
-                  ${
-                    activeItem === item.id
-                      ? "lg:left-10 lg:rotate-0 whitespace-nowrap lg:top-10 lg:text-[42px] text-3xl left-6 top-6"
-                      : "lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-2xl text-2xl left-6 top-1/2 -translate-y-1/2"
+                  ${activeItem === item.id
+                    ? "lg:left-10 lg:rotate-0 whitespace-nowrap lg:top-10 lg:text-[42px] text-3xl left-6 top-6"
+                    : "lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-2xl text-2xl left-6 top-1/2 -translate-y-1/2"
                   }
                   ${activeItem !== item.id ? "lg:vertical-text" : ""}
                 `}

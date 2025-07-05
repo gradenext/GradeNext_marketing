@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg md:text-2xl font-semibold mb-6">Get In Touch</h3>
             <div className="space-y-4">
-              <p className="text-gray-600 text-lg">supportgradenext@gmail.com</p>
+              <p className="text-gray-600 text-lg">contact@gradenext.com</p>
               <p className="text-gray-600 text-lg">+1 2404418984 </p>
               <p className="text-gray-600 text-lg">620 Veterans Blvd, Unit 525, Redwood City, CA, 94063</p>
             </div>

@@ -50,14 +50,14 @@ const features = [
     },
   },
   {
-    name: "Structured Testing & Weekly Assessments",
-    tooltip: "Regular assessment systems to measure progress",
+    name: "Subject Coverage",
+    tooltip: "GradeNext offers learning in Math, English, and Science. Others typically focus only on Math.",
     companies: {
-      gradeNext: "Weekly & Community Tests",
-      kumon: "No Weekly Tracking",
-      mathnasium: "Math-Only Tests",
-      koncept: "Periodic Assessments",
-      khanAcademy: "No Regular Testing",
+      gradeNext: "Math, English & Science",
+      kumon: "Math Only",
+      mathnasium: "Math Only",
+      koncept: "Primarily Math",
+      khanAcademy: "No multiple Subjects",
     },
   },
   {
