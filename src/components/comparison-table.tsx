@@ -6,6 +6,17 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const features = [
   {
+    name: "Subject Coverage",
+    tooltip: "GradeNext offers learning in Math, English, and Science. Others typically focus only on Math.",
+    companies: {
+      gradeNext: "Math, English & Science",
+      kumon: "Math Only",
+      mathnasium: "Math Only",
+      koncept: "Primarily Math",
+      khanAcademy: "No multiple Subjects",
+    },
+  },
+  {
     name: "Adaptive & Structured Learning",
     tooltip: "How the platform adapts to individual student needs and structures the learning process",
     companies: {
@@ -47,17 +58,6 @@ const features = [
       mathnasium: "Limited Data",
       koncept: "Basic Tracking",
       khanAcademy: "Generalized Feedback",
-    },
-  },
-  {
-    name: "Subject Coverage",
-    tooltip: "GradeNext offers learning in Math, English, and Science. Others typically focus only on Math.",
-    companies: {
-      gradeNext: "Math, English & Science",
-      kumon: "Math Only",
-      mathnasium: "Math Only",
-      koncept: "Primarily Math",
-      khanAcademy: "No multiple Subjects",
     },
   },
   {

@@ -34,7 +34,7 @@ const slides = [
     gradient: "bg-gradient-to-br from-orange-500 via-red-500 to-pink-600",
     accentGradient: "from-blue-400 to-indigo-500",
     icon: Sparkles,
-    heading: "Empowering Young Minds Through Coding",
+    heading: "Coding Classes For Young Minds",
     subheading: "Empowering the Next Generation of Innovators",
     paragraph:
       "GradeNext introduces kids to the world of coding through fun, hands-on learning experiences. From block-based programming to real-world projects in Python and web development, our curriculum builds logic, creativity, and future-ready skills.",

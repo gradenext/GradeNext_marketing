@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const items = [
   {
     id: 0,
-    title: "Smart Math Skills",
+    title: "Smart Learning Skills",
     color: "bg-emerald-500",
     hoverColor: "group-hover:bg-emerald-600",
     textColor: "text-emerald-50",
@@ -16,24 +16,27 @@ const items = [
     lightColor: "from-emerald-500/10 to-emerald-600/10",
     image: "https://images.unsplash.com/photo-1604081353631-86c8f2fc2d7b?q=80&w=2070&auto=format&fit=crop",
     description:
-      "Master Mental Math & Calculation Speed. Equip learners with powerful mental techniques to solve complex problems quickly, enhancing memory, focus, and numerical fluency through fun, real-life scenarios and brain-training activities.",
+      "Boost Math, Science & English Skills. Equip learners with powerful mental techniques to solve problems quickly, improve comprehension, retain scientific facts, and enhance vocabulary and grammar through engaging real-life contexts and brain-training activities.",
     features: [
-      "Mental calculation without pen and paper",
-      "Daily speed drills to improve reaction time",
-      "Brain exercises to build numerical memory",
-      "Gamified challenges to sharpen focus and accuracy",
+      "Mental math without pen and paper",
+      "Science-based thinking & observation drills",
+      "Daily reading and vocabulary challenges",
+      "Brain exercises to build memory and comprehension",
+      "Gamified tasks to improve speed, accuracy, and focus",
     ],
     content: {
-      subtitle: "Fast Thinking & Mental Calculation",
+      subtitle: "Fast Thinking Across Math, Science & English",
       description:
-        "Our smart math program helps students master mental arithmetic techniques that dramatically boost calculation speed and confidence. With zero dependency on pen and paper, learners engage in brain-stimulating challenges and real-world problem scenarios. The curriculum enhances focus, memory retention, and math fluency while making learning exciting and relevant. This foundational skill not only helps in academics but also supports quick thinking in everyday decision-making.",
+        "Our Smart Learning program helps students master core skills across math, science, and English. Learners develop rapid mental calculation techniques, enhance scientific reasoning through experiments and real-world observation, and improve language fluency with vocabulary, grammar, and reading tasks. With zero dependency on rote memorization, students build long-term retention and critical thinking. The curriculum boosts confidence, comprehension, and cognitive agility—skills essential for both academic success and real-life problem-solving.",
       stats: [
         { label: "Mental Math Speed", value: "93%" },
-        { label: "Numerical Fluency", value: "94%" },
+        { label: "Science Comprehension", value: "92%" },
+        { label: "English Fluency & Vocabulary", value: "4.7/5" },
         { label: "Focus & Recall", value: "4.8/5" },
-      ],
-    },
+      ]
+    }
   },
+
   {
     id: 1,
     title: "Personalized 1:1 Tutor Support",
@@ -64,7 +67,7 @@ const items = [
   },
   {
     id: 2,
-    title: "Future-Ready Coding Education",
+    title: "Coding For Next Generation",
     color: "bg-red-500",
     hoverColor: "group-hover:bg-red-600",
     textColor: "text-red-50",

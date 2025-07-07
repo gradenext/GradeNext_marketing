@@ -20,7 +20,7 @@ const pricingPlans = [
     description: "Best for individuals exploring learning resources.",
     features: [
       { name: "Access to common core syllabus", included: true },
-      { name: "Limited math practice only", included: true },
+      { name: "Limited Math+English practice only", included: true },
       { name: "Progress tracking dashboard", included: true },
       { name: "Interactive learning activities", included: true },
       { name: "No tutor support", included: true },
@@ -41,8 +41,8 @@ const pricingPlans = [
     features: [
       { name: "Access to all Basic features", included: true },
       { name: "Covers Math, English & Science subjects", included: true },
-      { name: "Access to common core and state syllabus", included: true },
-      { name: "1:1 tutor support on additional nominal cost ($5 per class)", included: true },
+      { name: "Access to Common core + State syllabus", included: true },
+      { name: "1:1 tutor support in additional $5 per class.", included: true },
       { name: "Unlimited practice & revision exercises", included: true },
       // { name: "Unlimited practice & revision exercises", included: true },
       // { name: "Priority email support", included: true },
