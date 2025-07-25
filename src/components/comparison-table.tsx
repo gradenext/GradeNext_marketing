@@ -10,8 +10,8 @@ const features = [
     tooltip: "GradeNext offers learning in Math, English, and Science. Others typically focus only on Math.",
     companies: {
       gradeNext: "Math, English & Science",
-      kumon: "Math Only",
-      mathnasium: "Math Only",
+      kumon: "Math Focussed",
+      mathnasium: "Math Focussed",
       koncept: "Primarily Math",
       khanAcademy: "No multiple Subjects",
     },
