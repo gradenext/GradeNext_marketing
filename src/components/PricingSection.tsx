@@ -15,7 +15,7 @@ import Link from "next/link";
 const pricingPlans = [
   {
     name: "Basic",
-    price: "$19",
+    price: "$49",
     period: "/mo",
     description: "Best for individuals exploring learning resources.",
     features: [
@@ -35,14 +35,14 @@ const pricingPlans = [
   },
   {
     name: "Pro",
-    price: "$49",
+    price: "$99",
     period: "/mo",
     description: "Best for dedicated learners seeking structured progress.",
     features: [
       { name: "Access to all Basic features", included: true },
       { name: "Covers Math, English & Science subjects", included: true },
       { name: "Access to Common core + State syllabus", included: true },
-      { name: "1:1 tutor support in additional $5 per class.", included: true },
+      { name: "Dedicated personalized 1:1 tutor support (Free 1 class per week)", included: true },
       { name: "Unlimited practice & revision exercises", included: true },
       // { name: "Unlimited practice & revision exercises", included: true },
       // { name: "Priority email support", included: true },
@@ -57,14 +57,14 @@ const pricingPlans = [
   },
   {
     name: "Advance",
-    price: "$99",
+    price: "$199",
     period: "/mo",
     description: "Best for advance learner for competitive exams",
     features: [
       { name: "All Pro features access", included: true },
       { name: "Includes Pro syllabus and advanced courses", included: true },
       { name: "Competitive exam-focused plan", included: true },
-      { name: "Dedicated personalized 1:1 tutor support (Free 1 hour class per week)", included: true },
+      { name: "Dedicated personalized 1:1 tutor support (Free 2 classes per week)", included: true },
       { name: "Advanced analytics, goal tracking & reports", included: true },
       // { name: "Custom learning paths", included: true },
       // { name: "Dedicated tutor support", included: true },
